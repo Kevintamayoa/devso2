@@ -1,6 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this license header, choose License Headers in Project Properate file, choose Tools | Templatesties.
+ * To change this templ
  * and open the template in the editor.
  */
 package devso2;
@@ -21,7 +21,7 @@ public class DevSo extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-       login o=new login();
+       NuevoDesarrollo o=new NuevoDesarrollo();
        o.setVisible(true);
        //setVisible(false); 
     }

@@ -191,12 +191,6 @@ AutoCompleteJComboBox combo = new AutoCompleteJComboBox(searchable,cbxUser);
             {
                 Save.TemporalUser=user;
                 JOptionPane.showMessageDialog(this,"Acceso concedido.");
-             //   Interfaz form=new Interfaz();
-              //  form.setIconImage(new ImageIcon(getClass().getResource("Images/Screenshot_1.png")).getImage());
-
-              //  form.setExtendedState(JFrame.MAXIMIZED_BOTH);
-              //  this.setVisible(false);
-              //  form.setVisible(true);
             }
         }catch(Exception e){}
 

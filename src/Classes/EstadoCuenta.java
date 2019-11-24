@@ -40,10 +40,10 @@ public void EstadoCuenta(List<Income> incomes,List<Expense> expenses,List<Moves_
    
   
     for(Expense obj : expenses){
-        list.add(new EstadoCuenta(obj.Date,2,obj.Expense_Type,"",obj.Concept,obj.Amount));
+        //list.add(new EstadoCuenta(obj.Date,2,obj.Expense_Type,"",obj.Concept,obj.Amount));
     }
        for(Income obj : incomes){
-        list.add(new EstadoCuenta(obj.Date,1,obj.Expense_Type,obj.Client,obj.Concept,obj.Amount));
+        //list.add(new EstadoCuenta(obj.Date,1,obj.Expense_Type,obj.Client,obj.Concept,obj.Amount));
     }
         for(Moves_Account obj : moves){
             if(obj.In_Id==account_id&&obj.Out_Id==account_id){}else{

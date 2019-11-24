@@ -79,8 +79,8 @@ public class SaldoClientes extends javax.swing.JFrame {
         for(Client obj: clients)
         {
             
-            model.addRow(new Object[]{obj.Id,obj.Description,obj.Direccion,
-               obj.Email,obj.Telefono,obj.Monto,obj.MontoPagado,obj.Saldo()});
+          //  model.addRow(new Object[]{obj.Id,obj.Description,obj.Direccion,
+         //      obj.Email,obj.Telefono,obj.Monto,obj.MontoPagado,obj.Saldo()});
         }
               trs=new TableRowSorter(model);
         table.setRowSorter(trs);
@@ -367,8 +367,8 @@ txtBusqueda2.addKeyListener(new KeyAdapter(){
         for(Client obj: clients)
         {
             
-            model.addRow(new Object[]{obj.Id,obj.Description,obj.Direccion,
-               obj.Email,obj.Telefono,obj.Monto,obj.MontoPagado,obj.Saldo()});
+//            model.addRow(new Object[]{obj.Id,obj.Description,obj.Direccion,
+//               obj.Email,obj.Telefono,obj.Monto,obj.MontoPagado,obj.Saldo()});
         }
        
        }catch(Exception e){}
@@ -445,8 +445,8 @@ txtBusqueda2.addKeyListener(new KeyAdapter(){
             boolean factura=false;
             DecimalFormat formatea = new DecimalFormat("$###,###.##");
  
-            model.addRow(new Object[]{obj.Id,obj.Description,obj.Direccion,
-               obj.Email,obj.Telefono,obj.Monto,obj.MontoPagado,obj.Saldo()});
+//            model.addRow(new Object[]{obj.Id,obj.Description,obj.Direccion,
+//               obj.Email,obj.Telefono,obj.Monto,obj.MontoPagado,obj.Saldo()});
         }
 
     }//GEN-LAST:event_btnNuevoClienteActionPerformed
@@ -481,8 +481,8 @@ JOptionPane.YES_NO_OPTION);
         }
         for(Client obj: clients)
         {
-        model.addRow(new Object[]{obj.Id,obj.Description,obj.Direccion,
-               obj.Email,obj.Telefono,obj.Monto,obj.MontoPagado,obj.Saldo()});
+//        model.addRow(new Object[]{obj.Id,obj.Description,obj.Direccion,
+//               obj.Email,obj.Telefono,obj.Monto,obj.MontoPagado,obj.Saldo()});
         }
           
    }
@@ -515,8 +515,8 @@ JOptionPane.YES_NO_OPTION);
         for(Client obj: clients)
         {
             
-            model.addRow(new Object[]{obj.Id,obj.Description,obj.Direccion,
-               obj.Email,obj.Telefono,obj.Monto,obj.MontoPagado,obj.Saldo()});
+//            model.addRow(new Object[]{obj.Id,obj.Description,obj.Direccion,
+//               obj.Email,obj.Telefono,obj.Monto,obj.MontoPagado,obj.Saldo()});
         }
          }    
          catch(Exception e){}
@@ -553,8 +553,8 @@ JOptionPane.YES_NO_OPTION);
             boolean factura=false;
             DecimalFormat formatea = new DecimalFormat("$###,###.##");
  
-            model.addRow(new Object[]{obj.Id,obj.Description,obj.Direccion,
-               obj.Email,obj.Telefono,obj.Monto,obj.MontoPagado,obj.Saldo()});
+//            model.addRow(new Object[]{obj.Id,obj.Description,obj.Direccion,
+//               obj.Email,obj.Telefono,obj.Monto,obj.MontoPagado,obj.Saldo()});
         }
     }//GEN-LAST:event_btnPagarActionPerformed
 

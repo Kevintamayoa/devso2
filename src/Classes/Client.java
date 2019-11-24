@@ -12,21 +12,23 @@ package Classes;
 public class Client {
       public int Id;
     public String Description;
-    public String Direccion;
     public String Email;
     public String Telefono; 
+    public String Reference;
+    
+    
 
     public Client(){}
-    public Client( String Description, String Direccion, String Email, String Telefono) {
+    public Client( String Description, String Reference, String Email, String Telefono) {
         this.Description = Description;
-        this.Direccion = Direccion;
+        this.Reference = Reference;
         this.Email = Email;
         this.Telefono = Telefono;
     }
-    public Client(int id, String Description, String Direccion, String Email, String Telefono) {
+    public Client(int id, String Description, String Reference, String Email, String Telefono) {
        this.Id=id;
         this.Description = Description;
-        this.Direccion = Direccion;
+        this.Reference = Reference;
         this.Email = Email;
         this.Telefono = Telefono;
     }
@@ -36,10 +38,10 @@ public class Client {
         return Monto-MontoPagado;
     }
 
-    public Client(int Id, String Description, String Direccion, String Email, String Telefono, double Monto, double MontoPagado) {
+    public Client(int Id, String Description, String Reference, String Email, String Telefono, double Monto, double MontoPagado) {
         this.Id = Id;
         this.Description = Description;
-        this.Direccion = Direccion;
+        this.Reference = Reference;
         this.Email = Email;
         this.Telefono = Telefono;
         this.Monto = Monto;

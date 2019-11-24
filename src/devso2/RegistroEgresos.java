@@ -79,8 +79,8 @@ public class RegistroEgresos extends javax.swing.JDialog {
      con.Desconectar();
         for(Expense obj: expenses)
         {
-            model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Concept,obj.Account,
-            obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
+            //model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Concept,obj.Account,
+            //obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
         }
               trs=new TableRowSorter(model);
         tableEgresos.setRowSorter(trs);
@@ -365,8 +365,8 @@ public class RegistroEgresos extends javax.swing.JDialog {
             }
                    for(Expense obj: expenses)
         {
-            model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Concept,obj.Account,
-            obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
+            //model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Concept,obj.Account,
+            //obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
         }
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
@@ -417,8 +417,8 @@ public class RegistroEgresos extends javax.swing.JDialog {
         
        for(Expense obj: expenses)
         {
-            model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Concept,obj.Account,
-            obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
+            //model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Concept,obj.Account,
+            //obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
         }
     }//GEN-LAST:event_btnAgregarPagoActionPerformed
 

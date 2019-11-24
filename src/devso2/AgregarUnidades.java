@@ -9,7 +9,7 @@ package devso2;
  *
  * @author 146310
  */
-public class AgregarUnidades extends javax.swing.JFrame {
+public class AgregarUnidades extends javax.swing.JDialog {
 
     /**
      * Creates new form AgregarUnidades
@@ -43,37 +43,63 @@ public class AgregarUnidades extends javax.swing.JFrame {
         spnNumM2 = new javax.swing.JSpinner();
         txtPVM2 = new javax.swing.JTextField();
         txtPrecioVenta = new javax.swing.JTextField();
-        spnAnticipo = new javax.swing.JSpinner();
         dtcFinanciamiento = new com.toedter.calendar.JDateChooser();
         dtcVenta = new com.toedter.calendar.JDateChooser();
         dtcAnticipo = new com.toedter.calendar.JDateChooser();
-        spnFinanciamiento = new javax.swing.JSpinner();
+        txtFinanciamiento = new javax.swing.JTextField();
+        txtAnticipo = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(1, 36, 57));
 
+        jLabel1.setBackground(new java.awt.Color(187, 187, 187));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Numero de etapa:");
 
+        jLabel2.setBackground(new java.awt.Color(187, 187, 187));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Modelo:");
 
+        jLabel3.setBackground(new java.awt.Color(187, 187, 187));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("PV M2:");
 
+        jLabel4.setBackground(new java.awt.Color(187, 187, 187));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Num de m2:");
 
+        jLabel5.setBackground(new java.awt.Color(187, 187, 187));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Anticipo(%):");
 
+        jLabel6.setBackground(new java.awt.Color(187, 187, 187));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Precio de venta:");
 
+        jLabel7.setBackground(new java.awt.Color(187, 187, 187));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Financiamiento(%):");
 
+        jLabel8.setBackground(new java.awt.Color(187, 187, 187));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Fecha de anticipo:");
 
+        jLabel9.setBackground(new java.awt.Color(187, 187, 187));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Fecha de venta:");
 
+        jLabel10.setBackground(new java.awt.Color(187, 187, 187));
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Fecha de financiamiento:");
 
         cmbModelo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        txtAnticipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAnticipoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -109,13 +135,13 @@ public class AgregarUnidades extends javax.swing.JFrame {
                         .addContainerGap(59, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(spnNumM2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(spnAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtPrecioVenta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
-                                .addComponent(txtPVM2, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(dtcAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(spnFinanciamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(spnNumM2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(dtcAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtPrecioVenta)
+                                .addComponent(txtPVM2)
+                                .addComponent(txtAnticipo, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE))
+                            .addComponent(txtFinanciamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -145,24 +171,24 @@ public class AgregarUnidades extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
                             .addComponent(txtPrecioVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12)
+                        .addGap(13, 13, 13)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(spnAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(65, 65, 65)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(cmbModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(12, 12, 12)
+                .addGap(13, 13, 13)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(dtcAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(spnFinanciamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addComponent(txtFinanciamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -178,6 +204,10 @@ public class AgregarUnidades extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtAnticipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnticipoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAnticipoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -230,10 +260,10 @@ public class AgregarUnidades extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner spnAnticipo;
-    private javax.swing.JSpinner spnFinanciamiento;
     private javax.swing.JSpinner spnNumEtapa;
     private javax.swing.JSpinner spnNumM2;
+    private javax.swing.JTextField txtAnticipo;
+    private javax.swing.JTextField txtFinanciamiento;
     private javax.swing.JTextField txtPVM2;
     private javax.swing.JTextField txtPrecioVenta;
     // End of variables declaration//GEN-END:variables

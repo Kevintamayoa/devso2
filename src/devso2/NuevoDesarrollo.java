@@ -108,6 +108,18 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
         pnlCatalogo = new javax.swing.JPanel();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
+        jLabel18 = new javax.swing.JLabel();
+        btnEgresos = new javax.swing.JButton();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        tableEgresos = new javax.swing.JTable();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        tableIngresos = new javax.swing.JTable();
+        btnIngresos = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        tableCuentas = new javax.swing.JTable();
+        btnCuentas = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnInfoGeneral = new javax.swing.JButton();
         btnCredito = new javax.swing.JButton();
@@ -286,7 +298,7 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
                                     .addComponent(txtNombre)
                                     .addComponent(dtcInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(cmbProjectMnaguer, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(97, 97, 97)
+                                .addGap(30, 30, 30)
                                 .addGroup(pnlInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -305,7 +317,7 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlInfoLayout.createSequentialGroup()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 296, Short.MAX_VALUE)
                         .addGroup(pnlInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlInfoLayout.createSequentialGroup()
                                 .addComponent(jLabel7)
@@ -367,10 +379,11 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
                 .addGroup(pnlInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(293, Short.MAX_VALUE))
         );
 
         pnlSembrado.setBackground(new java.awt.Color(1, 36, 57));
+        pnlSembrado.setPreferredSize(new java.awt.Dimension(1129, 708));
 
         jPanel3.setBackground(new java.awt.Color(60, 82, 99));
 
@@ -427,7 +440,7 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
                 .addComponent(btnCargarModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnCrearFinanciamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAgregarUnidades, btnCargarEtapas, btnCargarModelo, btnCrearFinanciamiento});
@@ -474,7 +487,9 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
         pnlSembradoLayout.setHorizontalGroup(
             pnlSembradoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane1)
+            .addGroup(pnlSembradoLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 35, Short.MAX_VALUE))
         );
         pnlSembradoLayout.setVerticalGroup(
             pnlSembradoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -482,10 +497,11 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(349, Short.MAX_VALUE))
+                .addContainerGap(518, Short.MAX_VALUE))
         );
 
         pnlCredito.setBackground(new java.awt.Color(1, 36, 57));
+        pnlCredito.setPreferredSize(new java.awt.Dimension(1129, 708));
 
         jLabel12.setFont(new java.awt.Font("Malgun Gothic", 0, 14)); // NOI18N
         jLabel12.setText("Inversionista:");
@@ -652,7 +668,7 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
                         .addGap(33, 33, 33)
                         .addComponent(btnAddInversion)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlCreditoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlCreditoLayout.createSequentialGroup()
@@ -739,25 +755,196 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
 
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
+        jLabel18.setFont(new java.awt.Font("Malgun Gothic", 0, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Egresos");
+
+        btnEgresos.setText("Nuevo");
+        btnEgresos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEgresosActionPerformed(evt);
+            }
+        });
+
+        tableEgresos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID", "Descripcion", "Categoria", "null"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, true, true, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane7.setViewportView(tableEgresos);
+        if (tableEgresos.getColumnModel().getColumnCount() > 0) {
+            tableEgresos.getColumnModel().getColumn(0).setMinWidth(0);
+            tableEgresos.getColumnModel().getColumn(0).setPreferredWidth(0);
+            tableEgresos.getColumnModel().getColumn(0).setMaxWidth(0);
+        }
+
+        tableIngresos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID", "Descripcion", "Categoria", "null"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, true, true, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane8.setViewportView(tableIngresos);
+        if (tableIngresos.getColumnModel().getColumnCount() > 0) {
+            tableIngresos.getColumnModel().getColumn(0).setMinWidth(0);
+            tableIngresos.getColumnModel().getColumn(0).setPreferredWidth(0);
+            tableIngresos.getColumnModel().getColumn(0).setMaxWidth(0);
+        }
+
+        btnIngresos.setText("Nuevo");
+
+        jLabel20.setFont(new java.awt.Font("Malgun Gothic", 0, 24)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Ingresos");
+
+        tableCuentas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID", "Descripcion", "Categoria", "null"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, true, true, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane9.setViewportView(tableCuentas);
+        if (tableCuentas.getColumnModel().getColumnCount() > 0) {
+            tableCuentas.getColumnModel().getColumn(0).setMinWidth(0);
+            tableCuentas.getColumnModel().getColumn(0).setPreferredWidth(0);
+            tableCuentas.getColumnModel().getColumn(0).setMaxWidth(0);
+        }
+
+        btnCuentas.setText("Nuevo");
+
+        jLabel21.setFont(new java.awt.Font("Malgun Gothic", 0, 24)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("Cuentas");
+
         javax.swing.GroupLayout pnlCatalogoLayout = new javax.swing.GroupLayout(pnlCatalogo);
         pnlCatalogo.setLayout(pnlCatalogoLayout);
         pnlCatalogoLayout.setHorizontalGroup(
             pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlCatalogoLayout.createSequentialGroup()
-                .addGap(322, 322, 322)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
-                .addGap(289, 289, 289)
+                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel18)
+                            .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(btnEgresos))))
+                    .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(63, 63, 63)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.DEFAULT_SIZE, 1, Short.MAX_VALUE)
+                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnIngresos)
+                            .addComponent(jLabel20)))
+                    .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(75, 75, 75)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(323, 323, 323))
+                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnCuentas)
+                            .addComponent(jLabel21)))
+                    .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(16, 16, 16))
         );
         pnlCatalogoLayout.setVerticalGroup(
             pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCatalogoLayout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
-                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlCatalogoLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                                .addComponent(jLabel21)
+                                .addGap(23, 23, 23)
+                                .addComponent(btnCuentas)
+                                .addGap(14, 14, 14)
+                                .addComponent(jScrollPane9))))
+                    .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel20))
+                        .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(btnIngresos)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane8))
+                            .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addComponent(btnEgresos)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane7)
+                                .addGap(6, 6, 6))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlCatalogoLayout.createSequentialGroup()
+                        .addGap(175, 175, 175)
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(48, 48, 48))
         );
 
         jLayeredPane1.setLayer(pnlInfo, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -771,9 +958,9 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnlSembrado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnlSembrado, javax.swing.GroupLayout.DEFAULT_SIZE, 1193, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnlCredito, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnlCredito, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1193, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(pnlCatalogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -874,7 +1061,7 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addComponent(btnCatalogo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
-                .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -885,7 +1072,7 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(10, 10, 10)
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -979,6 +1166,10 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
         obj.setVisible(true);
     }//GEN-LAST:event_btnCrearFinanciamientoActionPerformed
 
+    private void btnEgresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEgresosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEgresosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1029,8 +1220,11 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
     private javax.swing.JButton btnCatalogo;
     private javax.swing.JButton btnCrearFinanciamiento;
     private javax.swing.JButton btnCredito;
+    private javax.swing.JButton btnCuentas;
+    private javax.swing.JButton btnEgresos;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnInfoGeneral;
+    private javax.swing.JButton btnIngresos;
     private javax.swing.JButton btnSalvarCredito;
     private javax.swing.JButton btnSembrado;
     private javax.swing.JComboBox<String> cmbAdministradores;
@@ -1047,8 +1241,11 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1070,6 +1267,9 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
@@ -1090,6 +1290,9 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
     private javax.swing.JSpinner spnDuracion;
     private javax.swing.JTable tableAdmins;
     private javax.swing.JTable tableCredito;
+    private javax.swing.JTable tableCuentas;
+    private javax.swing.JTable tableEgresos;
+    private javax.swing.JTable tableIngresos;
     private javax.swing.JTable tableInversiones;
     private javax.swing.JTable tableProjectManaguers;
     private javax.swing.JTextField txtCargarTicket;

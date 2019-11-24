@@ -10,11 +10,13 @@ package Classes;
  * @author macbook
  */
 public class User_Type {
-      public int Id;
-   public String Description;
-   public User_Type(int id,String name)
-   {
-       Id=id;
-       Description=name;
-   }
+    
+    public int Id;
+    public String Description;
+
+    public User_Type(int Id, String Description) {
+        this.Id = Id;
+        this.Description = Description;
+    }
+    
 }

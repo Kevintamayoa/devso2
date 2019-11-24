@@ -51,7 +51,7 @@ public class TotalCajas extends javax.swing.JFrame {
         for(Account cuenta :cuentas){
  
         
-           model.addRow(new Object[]{cuenta.Id,cuenta.Description,cuenta.Inicial});
+           //model.addRow(new Object[]{cuenta.Id,cuenta.Description,cuenta.Inicial});
         }
            con.Desconectar(); 
         }catch(Exception e){

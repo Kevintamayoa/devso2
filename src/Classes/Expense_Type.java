@@ -12,50 +12,33 @@ package Classes;
 public class Expense_Type {
     public int Id;
     public String Description;
-    public double Ppt;
     public int Category_Id;
-    public int Source_Id;
+    public double Ppt;
+    public String Category;
 
-    public Expense_Type(int Id, String Description, double Ppt, int Category_Id, int Source_Id) {
+    public Expense_Type(String Description, int Category_Id, double Ppt) {
+        this.Description = Description;
+        this.Category_Id = Category_Id;
+        this.Ppt = Ppt;
+    }
+
+    public Expense_Type(int Id, String Description, int Category_Id, double Ppt) {
         this.Id = Id;
         this.Description = Description;
-        this.Ppt = Ppt;
         this.Category_Id = Category_Id;
-        this.Source_Id = Source_Id;
+        this.Ppt = Ppt;
     }
-    public double Enero;        
-    public double Febrero;
-    public double Marzo;
-    public double Abril;        
-    public double Mayo;
-    public double Junio;
-    public double Julio;        
-    public double Agosto;
-    public double Septiembre;
-    public double Octubre;        
-    public double Noviembre;
-    public double Diciembre;
+    
+    
 
-    public Expense_Type(int Id, String Description, double Ppt, int Category_Id, int Source_Id, double Enero,
-            double Febrero, double Marzo, double Abril, double Mayo, double Junio, double Julio, double Agosto,
-            double Septiembre, double Octubre, double Noviembre, double Diciembre) {
+    public Expense_Type(int Id, String Description, int Category_Id, double Ppt, String Category) {
         this.Id = Id;
         this.Description = Description;
-        this.Ppt = Ppt;
         this.Category_Id = Category_Id;
-        this.Source_Id = Source_Id;
-        this.Enero = Enero;
-        this.Febrero = Febrero;
-        this.Marzo = Marzo;
-        this.Abril = Abril;
-        this.Mayo = Mayo;
-        this.Junio = Junio;
-        this.Julio = Julio;
-        this.Agosto = Agosto;
-        this.Septiembre = Septiembre;
-        this.Octubre = Octubre;
-        this.Noviembre = Noviembre;
-        this.Diciembre = Diciembre;
+        this.Ppt = Ppt;
+        this.Category = Category;
     }
+
+    
     
 }

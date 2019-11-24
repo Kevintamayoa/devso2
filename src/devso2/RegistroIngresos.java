@@ -83,8 +83,8 @@ public class RegistroIngresos extends javax.swing.JDialog {
      con.Desconectar();
         for(Income obj: incomes)
         {
-            model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Client,obj.Concept,obj.Account,
-            obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
+            //model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Client,obj.Concept,obj.Account,
+            //obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
         }
             
               trs=new TableRowSorter(model);
@@ -372,8 +372,8 @@ public class RegistroIngresos extends javax.swing.JDialog {
             }
             for(Income obj: incomes)
         {
-            model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Client,obj.Concept,obj.Account,
-            obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
+            //model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Client,obj.Concept,obj.Account,
+           // obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
         }
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
@@ -418,8 +418,8 @@ public class RegistroIngresos extends javax.swing.JDialog {
         con.Desconectar();
           for(Income obj: incomes)
         {
-            model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Client,obj.Concept,"",obj.Account,
-            obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
+            //model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Client,obj.Concept,"",obj.Account,
+            //obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
         }
             
     }//GEN-LAST:event_btnAgregarPagoActionPerformed

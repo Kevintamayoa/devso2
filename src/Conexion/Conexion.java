@@ -49,7 +49,7 @@ public class Conexion {
                 String Name = rs.getString(2);
                 String Password = rs.getString(3);
                 int UserType = rs.getInt(4);
-                list.add(new User(Id, Name, Password, UserType));
+                //list.add(new User(Id, Name, Password, UserType));
             }
         } catch (SQLException ex) {
             //   Logger.getLogger(FormPrincipal.class.getName()).log(Level.SEVERE, null, ex);
@@ -193,7 +193,7 @@ public class Conexion {
                 double amount=rs.getDouble(8);
                 String user=rs.getString(9);
                 
-                    list.add(new Expense(Id, Date,Type,Concept,Account,Bills,BillsNumber,amount,user));
+                    //list.add(new Expense(Id, Date,Type,Concept,Account,Bills,BillsNumber,amount,user));
             }
         return list;
     }  
@@ -215,7 +215,7 @@ public class Conexion {
                 double amount=rs.getDouble(8);
                 String user=rs.getString(9);
                 
-                    list.add(new Expense(Id, Date,Type,Concept,Account,Bills,BillsNumber,amount,user));
+                    //list.add(new Expense(Id, Date,Type,Concept,Account,Bills,BillsNumber,amount,user));
             }
         return list;
     }   
@@ -324,7 +324,7 @@ public class Conexion {
                 double amount=rs.getDouble(8);
                 String user=rs.getString(9);
                 
-                    list.add(new Expense(Id, Date,Type,Concept,Account,Bills,BillsNumber,amount,user));
+                    //list.add(new Expense(Id, Date,Type,Concept,Account,Bills,BillsNumber,amount,user));
             }
         return list;
     }
@@ -339,7 +339,7 @@ public class Conexion {
                 double amount=rs.getDouble(3);
                 int user=rs.getInt(4);
                  int source=rs.getInt(5);
-                    list.add(new Expense_Type(Id, Type,amount,user,source));
+                    //list.add(new Expense_Type(Id, Type,amount,user,source));
             }
         return list;
     }
@@ -362,7 +362,7 @@ public class Conexion {
                 double amount=rs.getDouble(9);
                 String user=rs.getString(10);
                 
-                    list.add(new Income(Id, Date,client,Type,Concept,Account,Bills,BillsNumber,amount,user));
+                    //list.add(new Income(Id, Date,client,Type,Concept,Account,Bills,BillsNumber,amount,user));
             }
         return list;
     }
@@ -386,7 +386,7 @@ public class Conexion {
                 double amount=rs.getDouble(9);
                 String user=rs.getString(10);
                 
-                    list.add(new Income(Id, Date,client,Type,Concept,Account,Bills,BillsNumber,amount,user));
+                    //list.add(new Income(Id, Date,client,Type,Concept,Account,Bills,BillsNumber,amount,user));
             }
         return list;
     }
@@ -409,7 +409,7 @@ public class Conexion {
                 double amount=rs.getDouble(9);
                 String user=rs.getString(10);
                 
-                    list.add(new Income(Id, Date,client,Type,Concept,Account,Bills,BillsNumber,amount,user));
+                    //list.add(new Income(Id, Date,client,Type,Concept,Account,Bills,BillsNumber,amount,user));
             }
         return list;
     }  
@@ -490,7 +490,7 @@ public class Conexion {
                 double amount=rs.getDouble(3);
                 int user=rs.getInt(4);
                  int source=rs.getInt(5);
-                    list.add(new Income_Type(Id, Type,amount,user,source));
+                    //list.add(new Income_Type(Id, Type,amount,user,source));
             }
         return list;
     }
@@ -1056,14 +1056,14 @@ public class Conexion {
             st.executeUpdate(sql);    
     }
     public void AddAccount(Account obj) throws SQLException {         
-      String sql = "INSERT INTO account VALUES(null,'"+obj.Description+"'," + obj.Type_Id+"," +obj.Inicial+");";
-            PreparedStatement st = con.prepareStatement(sql);
-            st.executeUpdate(sql);    
+      //String sql = "INSERT INTO account VALUES(null,'"+obj.Description+"'," + obj.Type_Id+"," +obj.Inicial+");";
+            //PreparedStatement st = con.prepareStatement(sql);
+            //st.executeUpdate(sql);    
     }
     public void AddClient(Client obj) throws SQLException {         
-      String sql = "INSERT INTO client VALUES(null,'"+obj.Description+"','" + obj.Direccion+"','" +obj.Email+"','" +obj.Telefono+"');";
-            PreparedStatement st = con.prepareStatement(sql);
-            st.executeUpdate(sql);    
+      //String sql = "INSERT INTO client VALUES(null,'"+obj.Description+"','" + obj.Direccion+"','" +obj.Email+"','" +obj.Telefono+"');";
+            //PreparedStatement st = con.prepareStatement(sql);
+            //st.executeUpdate(sql);    
     }
     public void AddProvider(Provider obj) throws SQLException {         
       String sql = "INSERT INTO provider VALUES(null,'"+obj.Description+"','" + obj.Contacto+"','" +obj.Email+"','" +obj.Detalle+"');";
@@ -1075,22 +1075,22 @@ public class Conexion {
         int year = obj.Date.getYear() + 1900;
         int dia = obj.Date.getDate();
         String dates=year+"-"+mes+"-"+dia;
-     String sql = "INSERT INTO expense VALUES(null,'"+dates+"'," + obj.Type_Id+",'"
-              +obj.Concept+"'," +obj.Account_Id+"," +obj.Bills+",'" +obj.BillsNumber+
-              "'," +obj.Amount+"," +Save.TemporalUser.Id+");";
-            PreparedStatement st = con.prepareStatement(sql);
-            st.executeUpdate(sql);    
+     //String sql = "INSERT INTO expense VALUES(null,'"+dates+"'," + obj.Type_Id+",'"
+              //+obj.Concept+"'," +obj.Account_Id+"," +obj.Bills+",'" +obj.BillsNumber+
+              //"'," +obj.Amount+"," +Save.TemporalUser.Id+");";
+            //PreparedStatement st = con.prepareStatement(sql);
+            //st.executeUpdate(sql);    
     }
     public void AddIncome(Income obj) throws SQLException { 
       int mes = obj.Date.getMonth() + 1;
         int year = obj.Date.getYear() + 1900;
         int dia = obj.Date.getDate();
         String dates=year+"-"+mes+"-"+dia;
-        String sql = "INSERT INTO income VALUES(null,'"+dates+"'," + obj.Client_Id+"," + obj.Type_Id+",'"
-              +obj.Concept+"'," +obj.Account_Id+"," +obj.Bills+",'" +obj.BillsNumber+
-              "'," +obj.Amount+"," +Save.TemporalUser.Id+");";
-            PreparedStatement st = con.prepareStatement(sql);
-            st.executeUpdate(sql);    
+       // String sql = "INSERT INTO income VALUES(null,'"+dates+"'," + obj.Client_Id+"," + obj.Type_Id+",'"
+              //+obj.Concept+"'," +obj.Account_Id+"," +obj.Bills+",'" +obj.BillsNumber+
+             // "'," +obj.Amount+"," +Save.TemporalUser.Id+");";
+            //PreparedStatement st = con.prepareStatement(sql);
+            //st.executeUpdate(sql);    
     }
     public void AddInventoryCategory(Inventory_Category obj) throws SQLException { 
       String sql = "INSERT INTO inventory_category VALUES(null,'"+obj.Description+"');";
@@ -1146,10 +1146,10 @@ public class Conexion {
             st3.executeUpdate(sql); 
 }    
          if(obj2.Type_Id!=0){
-           sql = "INSERT INTO expense VALUES(null,'"+dates+"',1,''," +obj.Account_Id+"," +obj2.Bills+",'" +obj2.BillsNumber+
-              "'," +obj2.Amount+"," +Save.TemporalUser.Id+");";
+           //sql = "INSERT INTO expense VALUES(null,'"+dates+"',1,''," +obj.Account_Id+"," +obj2.Bills+",'" +obj2.BillsNumber+
+              //"'," +obj2.Amount+"," +Save.TemporalUser.Id+");";
             PreparedStatement st4 = con.prepareStatement(sql);
-            st4.executeUpdate(sql);   
+            //st4.executeUpdate(sql);   
                      sql = "SELECT MAX(id) FROM expense;";
        int expense=0;
             Statement st5 = con.createStatement();
@@ -1367,11 +1367,11 @@ public class Conexion {
 }    }
               if(list3.size()>0){
           for(Income ob : list3){
-        sql = "INSERT INTO income VALUES(null,'"+dates+"'," + obj.Client_Id+",1,'',"
-              +ob.Account_Id+"," +ob.Bills+",'" +ob.BillsNumber+
-              "'," +ob.Amount+"," +Save.TemporalUser.Id+");";
-            PreparedStatement st34 = con.prepareStatement(sql);
-            st34.executeUpdate(sql); 
+        //sql = "INSERT INTO income VALUES(null,'"+dates+"'," + obj.Client_Id+",1,'',"
+             // +ob.Account_Id+"," +ob.Bills+",'" +ob.BillsNumber+
+             // "'," +ob.Amount+"," +Save.TemporalUser.Id+");";
+            //PreparedStatement st34 = con.prepareStatement(sql);
+           // st34.executeUpdate(sql); 
                 sql = "SELECT MAX(id) FROM income;";
        int income=0;
             Statement st7 = con.createStatement();
@@ -1510,9 +1510,9 @@ public class Conexion {
             st.executeUpdate(sql);    
     }
     public void UpdateClient(Client obj) throws SQLException {         
-      String sql = "UPDATE client SET description='"+obj.Description+"',direccion='" + obj.Direccion+"',email='"+obj.Email+"',telefono='" + obj.Telefono+"' WHERE id="+obj.Id+" ;";
-            PreparedStatement st = con.prepareStatement(sql);
-            st.executeUpdate(sql);    
+      //String sql = "UPDATE client SET description='"+obj.Description+"',direccion='" + obj.Direccion+"',email='"+obj.Email+"',telefono='" + obj.Telefono+"' WHERE id="+obj.Id+" ;";
+            //PreparedStatement st = con.prepareStatement(sql);
+            //st.executeUpdate(sql);    
     }
               public void UpdateProvider(Provider obj) throws SQLException {         
       String sql = "UPDATE provider SET description='"+obj.Description+"',contacto='" + obj.Contacto+"',email='"+obj.Email+"',detalle='" + obj.Detalle+"' WHERE id="+obj.Id+" ;";
@@ -1920,7 +1920,7 @@ PreparedStatement st4 = con.prepareStatement(sql4);
                      double A10 = rs.getDouble(15);
                      double A11 = rs.getDouble(16);
                      double A12 = rs.getDouble(17);
-                     list.add(new Expense_Type(Id, Type, amount, user, source, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12));
+                     //list.add(new Expense_Type(Id, Type, amount, user, source, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12));
                  }
         return list;
     }     
@@ -1973,7 +1973,7 @@ PreparedStatement st4 = con.prepareStatement(sql4);
                      double A10 = rs.getDouble(15);
                      double A11 = rs.getDouble(16);
                      double A12 = rs.getDouble(17);
-                     list.add(new Income_Type(Id, Type, amount, user, source, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12));
+                     //list.add(new Income_Type(Id, Type, amount, user, source, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12));
                  }
         return list;
     }     
@@ -1988,7 +1988,7 @@ PreparedStatement st4 = con.prepareStatement(sql4);
                 String Description = rs.getString(2);
                 double Ppt = rs.getDouble(3);
                 int ExpensesCategory_Id = rs.getInt(4);
-                list.add(new Expense_Type(Id, Description, Ppt, ExpensesCategory_Id,1));
+                //list.add(new Expense_Type(Id, Description, Ppt, ExpensesCategory_Id,1));
             }
         } catch (SQLException ex) {
             //   Logger.getLogger(FormPrincipal.class.getName()).log(Level.SEVERE, null, ex);
@@ -2006,7 +2006,7 @@ PreparedStatement st4 = con.prepareStatement(sql4);
                 String Description = rs.getString(2);
                 double Ppt = rs.getDouble(3);
                 int ExpensesCategory_Id = rs.getInt(4);
-                list.add(new Income_Type(Id, Description, Ppt, ExpensesCategory_Id,1));
+                //list.add(new Income_Type(Id, Description, Ppt, ExpensesCategory_Id,1));
             }
         } catch (SQLException ex) {
             //   Logger.getLogger(FormPrincipal.class.getName()).log(Level.SEVERE, null, ex);
@@ -2030,8 +2030,8 @@ PreparedStatement st4 = con.prepareStatement(sql4);
                 String BillsNumber = rs.getString(8);
                 double Amount = rs.getDouble(9);
                 int User_Id = rs.getInt(10);
-                list.add(new Income(Id, Date, IncomesType_Id, Proyect_Id, Concept, Account_Id,
-                        Bills, BillsNumber, Amount, User_Id));
+                //list.add(new Income(Id, Date, IncomesType_Id, Proyect_Id, Concept, Account_Id,
+                       // Bills, BillsNumber, Amount, User_Id));
             }
         } catch (SQLException ex) {
             //   Logger.getLogger(FormPrincipal.class.getName()).log(Level.SEVERE, null, ex);
@@ -2049,7 +2049,7 @@ PreparedStatement st4 = con.prepareStatement(sql4);
                 String Description = rs.getString(2);
                 double Ppt = rs.getDouble(3);
                 int IncomesCategory_Id = rs.getInt(4);
-                list.add(new Income_Type(Id, Description, Ppt, IncomesCategory_Id,1));
+                //list.add(new Income_Type(Id, Description, Ppt, IncomesCategory_Id,1));
             }
         } catch (SQLException ex) {
             //   Logger.getLogger(FormPrincipal.class.getName()).log(Level.SEVERE, null, ex);
@@ -2072,8 +2072,8 @@ PreparedStatement st4 = con.prepareStatement(sql4);
                 String BillsNumber = rs.getString(7);
                 double Amount = rs.getDouble(8);
                 int User_Id = rs.getInt(9);
-                list.add(new Expense(Id, Date, ExpensesCategory_Id, Concept, Account_Id,
-                        Bills, BillsNumber, Amount, User_Id));
+                //list.add(new Expense(Id, Date, ExpensesCategory_Id, Concept, Account_Id,
+                        //Bills, BillsNumber, Amount, User_Id));
             }
         } catch (SQLException ex) {
             //   Logger.getLogger(FormPrincipal.class.getName()).log(Level.SEVERE, null, ex);

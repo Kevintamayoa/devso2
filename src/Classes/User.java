@@ -12,14 +12,37 @@ package Classes;
 public class User {
    public int Id;
    public String Name;
+   public String lname;
    public String Password;
    public int Type_Id;
-   public User(int id,String name, String password,int userType)
-   {
-       Id=id;
-       Name=name;
-       Password=password;
-       Type_Id=userType;
-   }
+   public String Type;
+
+    public User(String Name, String lname, String Password, int Type_Id) {
+        this.Name = Name;
+        this.lname = lname;
+        this.Password = Password;
+        this.Type_Id = Type_Id;
+    }
+
+    public User(int Id, String Name, String lname, String Password, int Type_Id) {
+        this.Id = Id;
+        this.Name = Name;
+        this.lname = lname;
+        this.Password = Password;
+        this.Type_Id = Type_Id;
+    }
+
+    public User(int Id, String Name, String lname, String Password, int Type_Id, String Type) {
+        this.Id = Id;
+        this.Name = Name;
+        this.lname = lname;
+        this.Password = Password;
+        this.Type_Id = Type_Id;
+        this.Type = Type;
+    }
+
+    
+   
+   
     
 }

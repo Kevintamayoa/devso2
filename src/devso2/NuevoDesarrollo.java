@@ -14,6 +14,8 @@ import java.awt.Font;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
@@ -37,8 +39,11 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
           ManagersList.add(new User(3,"Alex","Correa","Correa",1,"manager"));
          ManagersList.add(new User(4,"xcheñ","carranza","Correa",1,"manager"));
           ManagersList.add(new User(5,"kevin","tamayo","Correa",1,"manager"));
-          AdminsList.forEach((obj) -> {vectorAdmins.add(obj.Name);});
-    AutoCompleteJComboBox combo = new AutoCompleteJComboBox(new StringSearcheable(vectorAdmins),cmbAdministradores);
+//config cbx admins
+   AdminsList.forEach((obj) -> {vectorAdmins.add(obj.Name);});
+cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
+           AutoCompleteJComboBox combo = new AutoCompleteJComboBox(new StringSearcheable(vectorAdmins),cmbAdministradores);
+    
         modelAdmins=(DefaultTableModel)tableAdmins.getModel();
         pnlSembrado.setVisible(false);
         pnlCredito.setVisible(false);

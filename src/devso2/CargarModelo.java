@@ -5,6 +5,10 @@
  */
 package devso2;
 
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.table.DefaultTableCellRenderer;
+
 /**
  *
  * @author 146310
@@ -16,6 +20,12 @@ public class CargarModelo extends javax.swing.JDialog {
      */
     public CargarModelo() {
         initComponents();
+        
+        tableCargarModelos.getTableHeader().setBackground(Color.white);
+        tableCargarModelos.getTableHeader().setForeground(Color.black);
+        tableCargarModelos.getTableHeader().setFont(new Font("InaiMathi", 0, 20));
+        DefaultTableCellRenderer tcr = new DefaultTableCellRenderer();
+        tableCargarModelos.getColumnModel().getColumn(1).setCellRenderer(tcr);
     }
 
     /**
@@ -50,10 +60,10 @@ public class CargarModelo extends javax.swing.JDialog {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Boolean.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, true
+                false, false, true
             };
 
             public Class getColumnClass(int columnIndex) {

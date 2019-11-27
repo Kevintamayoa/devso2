@@ -21,7 +21,7 @@ public class DevSo extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-       NuevoDesarrollo o=new NuevoDesarrollo();
+       NuevoDesarrollo o = new NuevoDesarrollo();
        o.setVisible(true);
        //setVisible(false); 
     }

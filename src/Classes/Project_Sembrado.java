@@ -28,6 +28,9 @@ public class Project_Sembrado {
     public int Duration;
     public double Amount;
     public Date Date;
+    public Date DateAnticipo;
+    public Date DateMensualidad;
+    public Date DateSaldo;
     
     public String Project;
     public String Cliente;
@@ -35,7 +38,7 @@ public class Project_Sembrado {
     public String Lote;
     public String Etapa;
 
-    public Project_Sembrado(int Project_Id, int Cliente_Id, int Zone_Id, int Lote_Id, int Etapa_Id, int Num, String Nomenclatura, double M2, double Cost, double Anticipo, double Mensualidad, double Saldo, int Duration, double Amount, Date date) {
+    public Project_Sembrado(int Project_Id, int Cliente_Id, int Zone_Id, int Lote_Id, int Etapa_Id, int Num, String Nomenclatura, double M2, double Cost, double Anticipo, double Mensualidad, double Saldo, int Duration, double Amount, Date date, Date DateAnticipo, Date DateMensualidad, Date DateDalso) {
         this.Project_Id = Project_Id;
         this.Cliente_Id = Cliente_Id;
         this.Zone_Id = Zone_Id;
@@ -51,9 +54,12 @@ public class Project_Sembrado {
         this.Duration = Duration;
         this.Amount = Amount;
         this.Date = Date;
+        this.DateMensualidad = DateMensualidad;
+        this.DateSaldo = DateSaldo;
+        this.DateAnticipo = DateAnticipo;
     }
 
-    public Project_Sembrado(int Id, int Project_Id, int Cliente_Id, int Zone_Id, int Lote_Id, int Etapa_Id, int Num, String Nomenclatura, double M2, double Cost, double Anticipo, double Mensualidad, double Saldo, int Duration, double Amount) {
+    public Project_Sembrado(int Id, int Project_Id, int Cliente_Id, int Zone_Id, int Lote_Id, int Etapa_Id, int Num, String Nomenclatura, double M2, double Cost, double Anticipo, double Mensualidad, double Saldo, int Duration, double Amount, Date DateAnticipo, Date DateMensualidad, Date DateDalso) {
         this.Id = Id;
         this.Project_Id = Project_Id;
         this.Cliente_Id = Cliente_Id;
@@ -70,9 +76,12 @@ public class Project_Sembrado {
         this.Duration = Duration;
         this.Amount = Amount;
         this.Date = Date;
+        this.DateMensualidad = DateMensualidad;
+        this.DateSaldo = DateSaldo;
+        this.DateAnticipo = DateAnticipo;
     }
 
-    public Project_Sembrado(int Id, int Project_Id, int Cliente_Id, int Zone_Id, int Lote_Id, int Etapa_Id, int Num, String Nomenclatura, double M2, double Cost, double Anticipo, double Mensualidad, double Saldo, int Duration, double Amount, String Project, String Cliente, String Zone, String Lote, String Etapa) {
+    public Project_Sembrado(int Id, int Project_Id, int Cliente_Id, int Zone_Id, int Lote_Id, int Etapa_Id, int Num, String Nomenclatura, double M2, double Cost, double Anticipo, double Mensualidad, double Saldo, int Duration, double Amount, String Project, String Cliente, String Zone, String Lote, String Etapa, Date DateAnticipo, Date DateMensualidad, Date DateDalso) {
         this.Id = Id;
         this.Project_Id = Project_Id;
         this.Cliente_Id = Cliente_Id;
@@ -94,6 +103,9 @@ public class Project_Sembrado {
         this.Lote = Lote;
         this.Etapa = Etapa;
         this.Date = Date;
+        this.DateMensualidad = DateMensualidad;
+        this.DateSaldo = DateSaldo;
+        this.DateAnticipo = DateAnticipo;
     }
     
     

@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/kelpo/Documents/SISTEMAS%20FIRMATIO/DevSo/devso2/src/Conexion/ConGet.java</file>
             <file>file:/C:/Users/kelpo/Documents/SISTEMAS%20FIRMATIO/DevSo/devso2/src/Classes/Account.java</file>
             <file>file:/C:/Users/kelpo/Documents/SISTEMAS%20FIRMATIO/DevSo/devso2/src/devso2/RegistroIngresos.java</file>
@@ -34,6 +35,11 @@
             <file>file:/C:/Users/kelpo/Documents/SISTEMAS%20FIRMATIO/DevSo/devso2/src/devso2/CurrencyCellRenderer.java</file>
             <file>file:/C:/Users/kelpo/Documents/SISTEMAS%20FIRMATIO/DevSo/devso2/src/devso2/login.java</file>
             <file>file:/C:/Users/kelpo/Documents/SISTEMAS%20FIRMATIO/DevSo/devso2/src/devso2/VentaUnidades.java</file>
+=======
+            <file>file:/C:/Users/146310/Desktop/Firmatio/Proyecto/prt1/devso2/src/devso2/NuevoDesarrollo.java</file>
+            <file>file:/C:/Users/146310/Desktop/Firmatio/Proyecto/prt1/devso2/src/devso2/CrearFinanciamiento.java</file>
+            <file>file:/C:/Users/146310/Desktop/Firmatio/Proyecto/prt1/devso2/src/devso2/AgregarUnidades.java</file>
+>>>>>>> origin/Alexsaurio
         </group>
     </open-files>
 </project-private>

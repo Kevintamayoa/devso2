@@ -8,6 +8,7 @@ package devso2;
 import Adicionales.AutoCompleteJComboBox;
 import Adicionales.RoundedBorder;
 import Adicionales.StringSearcheable;
+import Classes.Investor;
 import Classes.User;
 import java.awt.Color;
 import java.awt.Font;
@@ -30,21 +31,46 @@ public class NuevoDesarrollo extends javax.swing.JFrame {
      */
     public NuevoDesarrollo() {
         initComponents();
+        
+        //Listas para los cmx
         AdminsList=new ArrayList<User>();
-               ManagersList=new ArrayList<User>();
-               TableAdminsList=new ArrayList<User>();
+        TableManager=new ArrayList<User>();
+        ManagersList=new ArrayList<User>();
+        TableAdminsList=new ArrayList<User>();
+         inversionistasList=new ArrayList<Investor>();
+         
+         
         AdminsList.add(new User(0,"Alex","Correa","Correa",0,"ADMI"));
          AdminsList.add(new User(1,"xcheñ","carranza","Correa",0,"ADMI"));
           AdminsList.add(new User(2,"kevin","tamayo","Correa",0,"ADMI"));
           ManagersList.add(new User(3,"Alex","Correa","Correa",1,"manager"));
          ManagersList.add(new User(4,"xcheñ","carranza","Correa",1,"manager"));
           ManagersList.add(new User(5,"kevin","tamayo","Correa",1,"manager"));
+          
+          
+          
 //config cbx admins
    AdminsList.forEach((obj) -> {vectorAdmins.add(obj.Name);});
 cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
            AutoCompleteJComboBox combo = new AutoCompleteJComboBox(new StringSearcheable(vectorAdmins),cmbAdministradores);
-    
         modelAdmins=(DefaultTableModel)tableAdmins.getModel();
+        
+        //config cbx managers
+   ManagersList.forEach((obj) -> {vectorManagers.add(obj.Name);});
+cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
+           AutoCompleteJComboBox comboa = new AutoCompleteJComboBox(new StringSearcheable(vectorManagers),cmbProjectMnaguer);   
+        modelManagers=(DefaultTableModel)tableProjectManaguers.getModel();
+        
+         
+        
+         inversionistasList.forEach((obj) -> {vectorInversiones.add(obj.Description);});
+cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
+           AutoCompleteJComboBox combo_inver = new AutoCompleteJComboBox(new StringSearcheable(vectorManagers),cmbProjectMnaguer);
+        modelManagers=(DefaultTableModel)tableProjectManaguers.getModel();
+        //FIN DE CONFIGS 
+        
+        
+        
         pnlSembrado.setVisible(false);
         pnlCredito.setVisible(false);
         pnlCatalogo.setVisible(false);
@@ -143,6 +169,8 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
 
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         pnlInfo = new javax.swing.JPanel();
@@ -208,27 +236,26 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
         rbPorcentajeCredito = new javax.swing.JRadioButton();
         rbMontoCredito = new javax.swing.JRadioButton();
         jLabel17 = new javax.swing.JLabel();
-        btnAgregarCreditos = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
         tableCredito = new javax.swing.JTable();
-        cmbAgregarCredito = new javax.swing.JComboBox<>();
         txtMontoCredito = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
+        txtMontoCredito1 = new javax.swing.JTextField();
         pnlCatalogo = new javax.swing.JPanel();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
         jLabel18 = new javax.swing.JLabel();
         btnEgresos = new javax.swing.JButton();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        tableEgresos = new javax.swing.JTable();
         jScrollPane8 = new javax.swing.JScrollPane();
         tableIngresos = new javax.swing.JTable();
         btnIngresos = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        tableCuentas = new javax.swing.JTable();
         btnCuentas = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        tableEgresos = new javax.swing.JTable();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        tableCuentas = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         btnInfoGeneral = new javax.swing.JButton();
         btnCredito = new javax.swing.JButton();
@@ -327,7 +354,7 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
 
         tableAdmins.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null}
+
             },
             new String [] {
                 "ID", "Administradores"
@@ -357,7 +384,7 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
 
         tableProjectManaguers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null}
+
             },
             new String [] {
                 "ID", "Project Manager"
@@ -539,7 +566,7 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
                     .addComponent(spnDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(btnAgregarProjectManager, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAgregarProjectManager)
                     .addComponent(cmbProjectMnaguer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7)
@@ -661,7 +688,6 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
             }
         });
         tableSembrado.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
-        tableSembrado.setColumnSelectionAllowed(false);
         jScrollPane1.setViewportView(tableSembrado);
         if (tableSembrado.getColumnModel().getColumnCount() > 0) {
             tableSembrado.getColumnModel().getColumn(0).setMinWidth(0);
@@ -696,14 +722,27 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
         jLabel14.setFont(new java.awt.Font("Malgun Gothic", 0, 14)); // NOI18N
         jLabel14.setText("Monto de devolución:");
 
-        cmbInversionista.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbInversionista.setEditable(true);
+        cmbInversionista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbInversionistaActionPerformed(evt);
+            }
+        });
 
         btnAgregarInversionista.setText("Añadir");
+        btnAgregarInversionista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarInversionistaActionPerformed(evt);
+            }
+        });
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Opciones"));
 
+        buttonGroup1.add(rbPorcentajeInversion);
+        rbPorcentajeInversion.setSelected(true);
         rbPorcentajeInversion.setText("Porcentaje(%)");
 
+        buttonGroup1.add(rbMontoInversion);
         rbMontoInversion.setText("Monto($)");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -728,7 +767,7 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
 
         tableInversiones.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null}
+
             },
             new String [] {
                 "ID", "Inversionista", "Monto de inversiones", "Monto de devolución"
@@ -766,8 +805,11 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder("Opciones"));
 
+        buttonGroup2.add(rbPorcentajeCredito);
+        rbPorcentajeCredito.setSelected(true);
         rbPorcentajeCredito.setText("Porcentaje(%)");
 
+        buttonGroup2.add(rbMontoCredito);
         rbMontoCredito.setText("Monto($)");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -789,11 +831,9 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
         jLabel17.setFont(new java.awt.Font("Malgun Gothic", 0, 14)); // NOI18N
         jLabel17.setText("Monto de credito:");
 
-        btnAgregarCreditos.setText("Añadir");
-
         tableCredito.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null}
+
             },
             new String [] {
                 "ID", "Inversionista", "Monto de inversiones", "Monto de devolución"
@@ -813,8 +853,6 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
             tableCredito.getColumnModel().getColumn(0).setPreferredWidth(0);
             tableCredito.getColumnModel().getColumn(0).setMaxWidth(0);
         }
-
-        cmbAgregarCredito.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel16.setFont(new java.awt.Font("Malgun Gothic", 0, 14)); // NOI18N
         jLabel16.setText("Creditos:");
@@ -840,11 +878,11 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
                                 .addGroup(pnlCreditoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(cmbInversionista, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(txtMontoInversiones)
-                                    .addComponent(txtMontoDevolucionInversionistas, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
+                                    .addComponent(txtMontoDevolucionInversionistas))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(pnlCreditoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnAgregarInversionista)))
+                                    .addComponent(btnAgregarInversionista, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(pnlCreditoLayout.createSequentialGroup()
                                 .addGap(2, 2, 2)
                                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -863,14 +901,12 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
                             .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtMontoDevolucionCredito, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pnlCreditoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cmbAgregarCredito, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnlCreditoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtMontoCredito1)
                             .addComponent(txtMontoCredito)
                             .addComponent(txtMontoDevolucion1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnlCreditoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAgregarCreditos)))
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlCreditoLayout.createSequentialGroup()
                         .addGap(2, 2, 2)
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -894,12 +930,11 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(pnlCreditoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel16)
-                                    .addComponent(cmbAgregarCredito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnAgregarCreditos))
+                                    .addComponent(txtMontoCredito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(pnlCreditoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel17)
-                                    .addComponent(txtMontoCredito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtMontoCredito1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(pnlCreditoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                                     .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -949,42 +984,12 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
             }
         });
 
-        tableEgresos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null}
-            },
-            new String [] {
-                "ID", "Descripcion", "Categoria", "null"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, true
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane7.setViewportView(tableEgresos);
-        if (tableEgresos.getColumnModel().getColumnCount() > 0) {
-            tableEgresos.getColumnModel().getColumn(0).setMinWidth(0);
-            tableEgresos.getColumnModel().getColumn(0).setPreferredWidth(0);
-            tableEgresos.getColumnModel().getColumn(0).setMaxWidth(0);
-        }
-
         tableIngresos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null}
+
             },
             new String [] {
-                "ID", "Descripcion", "Categoria", "null"
+                "ID", "Descripcion", "Categoria", ""
             }
         ) {
             Class[] types = new Class [] {
@@ -1020,19 +1025,25 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("Ingresos");
 
-        tableCuentas.setModel(new javax.swing.table.DefaultTableModel(
+        btnCuentas.setText("Nuevo");
+
+        jLabel21.setFont(new java.awt.Font("Malgun Gothic", 0, 24)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("Cuentas");
+
+        tableEgresos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null}
+
             },
             new String [] {
-                "ID", "Descripcion", "Categoria", "null"
+                "ID", "Descripcion", "Categoria", ""
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, true, true
+                false, false, false, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -1043,89 +1054,107 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane9.setViewportView(tableCuentas);
+        jScrollPane10.setViewportView(tableEgresos);
+        if (tableEgresos.getColumnModel().getColumnCount() > 0) {
+            tableEgresos.getColumnModel().getColumn(0).setMinWidth(0);
+            tableEgresos.getColumnModel().getColumn(0).setPreferredWidth(0);
+            tableEgresos.getColumnModel().getColumn(0).setMaxWidth(0);
+        }
+
+        tableCuentas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Descripcion", "Categoria", ""
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane11.setViewportView(tableCuentas);
         if (tableCuentas.getColumnModel().getColumnCount() > 0) {
             tableCuentas.getColumnModel().getColumn(0).setMinWidth(0);
             tableCuentas.getColumnModel().getColumn(0).setPreferredWidth(0);
             tableCuentas.getColumnModel().getColumn(0).setMaxWidth(0);
         }
 
-        btnCuentas.setText("Nuevo");
-
-        jLabel21.setFont(new java.awt.Font("Malgun Gothic", 0, 24)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setText("Cuentas");
-
         javax.swing.GroupLayout pnlCatalogoLayout = new javax.swing.GroupLayout(pnlCatalogo);
         pnlCatalogo.setLayout(pnlCatalogoLayout);
         pnlCatalogoLayout.setHorizontalGroup(
             pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlCatalogoLayout.createSequentialGroup()
-                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlCatalogoLayout.createSequentialGroup()
                         .addGap(89, 89, 89)
                         .addComponent(jLabel18)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(82, 82, 82)
                         .addComponent(btnEgresos))
                     .addGroup(pnlCatalogoLayout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(63, 63, 63)
+                        .addContainerGap()
+                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.DEFAULT_SIZE, 1, Short.MAX_VALUE)
-                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlCatalogoLayout.createSequentialGroup()
                         .addGap(101, 101, 101)
                         .addComponent(jLabel20)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(50, 50, 50)
                         .addComponent(btnIngresos))
                     .addGroup(pnlCatalogoLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(75, 75, 75)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlCatalogoLayout.createSequentialGroup()
-                        .addGap(101, 101, 101)
+                        .addGap(46, 46, 46)
                         .addComponent(jLabel21)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(54, 54, 54)
                         .addComponent(btnCuentas))
                     .addGroup(pnlCatalogoLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(16, 16, 16))
+                        .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         pnlCatalogoLayout.setVerticalGroup(
             pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                .addGap(175, 175, 175)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(pnlCatalogoLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel21)
+                        .addComponent(btnCuentas))
+                    .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(207, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCatalogoLayout.createSequentialGroup()
-                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlCatalogoLayout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pnlCatalogoLayout.createSequentialGroup()
-                                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel21)
-                                    .addComponent(btnCuentas))
-                                .addGap(64, 64, 64)
-                                .addComponent(jScrollPane9))))
-                    .addGroup(pnlCatalogoLayout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(jLabel18)
-                            .addComponent(jLabel20)
-                            .addComponent(btnEgresos)
-                            .addComponent(btnIngresos))
-                        .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlCatalogoLayout.createSequentialGroup()
-                                .addGap(61, 61, 61)
-                                .addComponent(jScrollPane8))
-                            .addGroup(pnlCatalogoLayout.createSequentialGroup()
-                                .addGap(67, 67, 67)
-                                .addComponent(jScrollPane7)
-                                .addGap(6, 6, 6))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlCatalogoLayout.createSequentialGroup()
-                        .addGap(175, 175, 175)
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(16, 16, 16)
+                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel20)
+                    .addComponent(btnEgresos)
+                    .addComponent(btnIngresos))
+                .addGap(61, 61, 61)
+                .addGroup(pnlCatalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane8)
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane11, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(48, 48, 48))
         );
 
@@ -1379,9 +1408,11 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
 
     private void btnAgregarProjectManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProjectManagerActionPerformed
         
-        User projectManager= ManagersList.stream().filter(obj -> cmbProjectMnaguer.getSelectedItem().toString().equals(obj.Name))
+        User o= ManagersList.stream().filter(obj -> cmbProjectMnaguer.getSelectedItem().toString().equals(obj.Name))
   .findAny()
   .orElse(null);
+         TableManager.add(new User(o.Id,o.Name,o.lname,o.Password,o.Type_Id,o.Type));
+      modelManagers.addRow(new Object[]{0,o.Name});
     }//GEN-LAST:event_btnAgregarProjectManagerActionPerformed
 
     private void btnAgregarAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarAdminActionPerformed
@@ -1391,6 +1422,16 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
         TableAdminsList.add(new User(o.Id,o.Name,o.lname,o.Password,o.Type_Id,o.Type));
       modelAdmins.addRow(new Object[]{0,o.Name});
     }//GEN-LAST:event_btnAgregarAdminActionPerformed
+
+    private void cmbInversionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbInversionistaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbInversionistaActionPerformed
+
+    private void btnAgregarInversionistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarInversionistaActionPerformed
+        AgregarInversionista obj= new AgregarInversionista();
+        obj.setModal(true);
+        obj.setVisible(true);
+    }//GEN-LAST:event_btnAgregarInversionistaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1423,25 +1464,33 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new NuevoDesarrollo().setVisible(true);
-                
+          
             }
         });
         
     }
     private DefaultTableModel sembrado;
         private DefaultTableModel modelAdmins;
-    List<User> ManagersList; //CMB LIST
+         private DefaultTableModel modelManagers;
+         private DefaultTableModel modelInversiones;
+         private DefaultTableModel modelCredito;
+
+         
     
+         List<User> ManagersList; //CMB LIST
+    List<User> TableManager;
     List<User> AdminsList;
      List<User> TableAdminsList;
-   
+     List<Investor> inversionistasList;
+    
+    Vector vectorCredito=new Vector(); 
+   Vector vectorInversiones=new Vector();
     Vector vectorManagers=new Vector();
     Vector vectorAdmins=new Vector();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CargarCompraVenta;
     private javax.swing.JButton btnAddInversion;
     private javax.swing.JButton btnAgregarAdmin;
-    private javax.swing.JButton btnAgregarCreditos;
     private javax.swing.JButton btnAgregarInversionista;
     private javax.swing.JButton btnAgregarProjectManager;
     private javax.swing.JButton btnAgregarUnidades;
@@ -1459,8 +1508,9 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
     private javax.swing.JButton btnIngresos;
     private javax.swing.JButton btnSalvarCredito;
     private javax.swing.JButton btnSembrado;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JComboBox<String> cmbAdministradores;
-    private javax.swing.JComboBox<String> cmbAgregarCredito;
     private javax.swing.JComboBox<String> cmbInversionista;
     private javax.swing.JComboBox<String> cmbProjectMnaguer;
     private com.toedter.calendar.JDateChooser dtcInicio;
@@ -1492,14 +1542,14 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
@@ -1526,6 +1576,7 @@ cmbAdministradores.setModel(new DefaultComboBoxModel(vectorAdmins));
     private javax.swing.JTextField txtComision;
     private javax.swing.JTextField txtDescripcion;
     private javax.swing.JTextField txtMontoCredito;
+    private javax.swing.JTextField txtMontoCredito1;
     private javax.swing.JTextField txtMontoDevolucion1;
     private javax.swing.JLabel txtMontoDevolucionCredito;
     private javax.swing.JTextField txtMontoDevolucionInversionistas;

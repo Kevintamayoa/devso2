@@ -27,24 +27,14 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         initComponents();
-        users=new ArrayList<User>();
-        con=new Conexion();
-        con.Conectar();
-        users=con.GetUsers();
-        con.Desconectar();
-        for(User obj: users){
-        
-        }
-         List<String> Words = new ArrayList<String>();
-   
-   for(User obj :users){
-        vector.add(obj.Name);  
-        Words.add(obj.Name);
-   }   
-cbxUser.setModel(new DefaultComboBoxModel(vector));
-StringSearcheable searchable = new StringSearcheable(Words);
-AutoCompleteJComboBox combo = new AutoCompleteJComboBox(searchable,cbxUser);
-
+ con=new Conexion();
+   con.Conectar();
+ // users=con.GetUsers();
+   con.Desconectar();
+     
+    users.forEach((obj) -> {vector.add(obj.Name);});
+    AutoCompleteJComboBox combo = new AutoCompleteJComboBox(new StringSearcheable(vector),cbxUser);
+    
   
     }
     Conexion con;
@@ -93,7 +83,7 @@ AutoCompleteJComboBox combo = new AutoCompleteJComboBox(searchable,cbxUser);
         jLabel1.setText("Usuario");
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("InaiMathi", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("InaiMathi", 0, 16)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Contraseña");
         jLabel3.setToolTipText("");
@@ -135,7 +125,7 @@ AutoCompleteJComboBox combo = new AutoCompleteJComboBox(searchable,cbxUser);
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
                     .addComponent(cbxUser, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -148,7 +138,7 @@ AutoCompleteJComboBox combo = new AutoCompleteJComboBox(searchable,cbxUser);
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(131, Short.MAX_VALUE)
+                .addContainerGap(133, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(cbxUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))

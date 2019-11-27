@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class Conexion {
 
     private Connection con = null;
-    String url = "jdbc:mysql://209.59.155.254:3306/firmatio_Ayana_Spa";
+    String url = "jdbc:mysql://209.59.155.254:3306/firmatio_devso_propier";
     String user = "firmatio_Kevin2";
     String pass = "Kev110797inTam";
     public Conexion() {
@@ -36,26 +36,7 @@ public class Conexion {
         con = null;
     }
 //Get//
-    public List<User> GetUsers(){
-        String sql = "SELECT * FROM user WHERE type_id<>0 ;";
-         List<User> list = new ArrayList<User>();
-  
-        try{
-       
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            while (rs.next()) {
-                int Id = rs.getInt(1);
-                String Name = rs.getString(2);
-                String Password = rs.getString(3);
-                int UserType = rs.getInt(4);
-                //list.add(new User(Id, Name, Password, UserType));
-            }
-        } catch (SQLException ex) {
-            //   Logger.getLogger(FormPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return list;
-    }
+   
     public List<Account> GetAccounts() throws SQLException {
         String sql = "SELECT A.id,A.description,A.type_id,A.inicial,B.description "
                 + "FROM account A INNER JOIN account_type B ON(B.id=A.type_id) order by A.description asc;";

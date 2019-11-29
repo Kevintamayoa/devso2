@@ -45,7 +45,7 @@ public class CargarEtapa extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(1, 36, 57));
+        jPanel1.setBackground(new java.awt.Color(47, 51, 66));
 
         jLabel1.setBackground(new java.awt.Color(187, 187, 187));
         jLabel1.setFont(new java.awt.Font("Malgun Gothic", 2, 24)); // NOI18N

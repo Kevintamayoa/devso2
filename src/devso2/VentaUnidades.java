@@ -32,15 +32,11 @@ public class VentaUnidades extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         cbMensualidades = new javax.swing.JSpinner();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         cbCliente = new javax.swing.JComboBox<>();
         dtFechaVenta = new com.toedter.calendar.JDateChooser();
         cbMetodoPago = new javax.swing.JComboBox<>();
@@ -48,53 +44,59 @@ public class VentaUnidades extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         txtPrecioSugerido = new javax.swing.JTextField();
         cbMesAnticipo = new javax.swing.JComboBox<>();
-        cbMesInicioMensualidad = new javax.swing.JComboBox<>();
-        cbMesSaldo = new javax.swing.JComboBox<>();
-        cmFinanciamineto = new javax.swing.JComboBox<>();
         txtAnticipo = new javax.swing.JTextField();
-        txtPorcentMensualidades = new javax.swing.JTextField();
         txtSaldo = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JButton();
         btnAddNew = new javax.swing.JButton();
+        cbMetodoPago1 = new javax.swing.JComboBox<>();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        txtAnticipo1 = new javax.swing.JTextField();
+        txtAnticipo2 = new javax.swing.JTextField();
+        txtAnticipo3 = new javax.swing.JTextField();
+        txtSaldo1 = new javax.swing.JTextField();
+        dtFechaVenta1 = new com.toedter.calendar.JDateChooser();
+        dtFechaVenta2 = new com.toedter.calendar.JDateChooser();
+        dtFechaVenta3 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel1.setText("Cliente");
 
-        jLabel2.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel2.setText("Fecha de venta");
 
-        jLabel3.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel3.setText("Método de pago");
 
-        jLabel4.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel4.setText("Precio de venta final");
 
-        jLabel5.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
-        jLabel5.setText("Financiamiento");
+        jLabel7.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel7.setText("% financiamiento");
 
-        jLabel6.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
-        jLabel6.setText("% Mensualidades");
-
-        jLabel7.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
-        jLabel7.setText("Anticipo");
-
-        jLabel8.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel8.setText("Mensualidades");
 
-        jLabel9.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
+        cbMensualidades.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
+        cbMensualidades.setFocusable(false);
+
+        jLabel9.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel9.setText("Saldo");
 
-        jLabel10.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
-        jLabel10.setText("Mes anticipo");
+        jLabel10.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel10.setText("Tipo de financiamiento");
 
-        jLabel11.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
-        jLabel11.setText("Mes de inicio de mensualidad");
-
-        jLabel12.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
-        jLabel12.setText("Mes saldo");
-
+        cbCliente.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
         cbCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,27 +104,27 @@ public class VentaUnidades extends javax.swing.JFrame {
             }
         });
 
+        dtFechaVenta.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
+
+        cbMetodoPago.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
         cbMetodoPago.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        txtPrecioFinalVenta.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
         txtPrecioFinalVenta.setText("jTextField1");
 
         jLabel13.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel13.setText("Precio sugerido");
 
         txtPrecioSugerido.setText("jTextField2");
 
+        cbMesAnticipo.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
         cbMesAnticipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        cbMesInicioMensualidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        cbMesSaldo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        cmFinanciamineto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
+        txtAnticipo.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
         txtAnticipo.setText("jTextField3");
 
-        txtPorcentMensualidades.setText("jTextField4");
-
+        txtSaldo.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
         txtSaldo.setText("jTextField5");
 
         btnGuardar.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
@@ -140,129 +142,173 @@ public class VentaUnidades extends javax.swing.JFrame {
         btnAddNew.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAddNew.setBorderPainted(false);
 
+        cbMetodoPago1.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
+        cbMetodoPago1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel14.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel14.setText("Etapa");
+
+        jLabel15.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel15.setText("Anticipo");
+
+        txtAnticipo1.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
+        txtAnticipo1.setText("jTextField3");
+
+        txtAnticipo2.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
+        txtAnticipo2.setText("jTextField3");
+
+        txtAnticipo3.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
+        txtAnticipo3.setText("jTextField3");
+
+        txtSaldo1.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
+        txtSaldo1.setText("jTextField5");
+
+        dtFechaVenta1.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
+
+        dtFechaVenta2.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
+
+        dtFechaVenta3.setFont(new java.awt.Font("Malgun Gothic", 0, 18)); // NOI18N
+
         javax.swing.GroupLayout pnlVentasUnidadesLayout = new javax.swing.GroupLayout(pnlVentasUnidades);
         pnlVentasUnidades.setLayout(pnlVentasUnidadesLayout);
         pnlVentasUnidadesLayout.setHorizontalGroup(
             pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 951, Short.MAX_VALUE)
+            .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
+                                .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtAnticipo1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(20, 20, 20)
+                                .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
+                                        .addComponent(txtAnticipo3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(dtFechaVenta3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
+                                        .addComponent(txtAnticipo2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(dtFechaVenta1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
+                                        .addComponent(txtSaldo1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(dtFechaVenta2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(cbMensualidades, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPrecioFinalVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbMetodoPago1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dtFechaVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbMetodoPago, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 323, Short.MAX_VALUE)
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtPrecioSugerido, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 100, Short.MAX_VALUE))
+                    .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(cbMesAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
-                            .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel11)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel10)
-                                .addComponent(jLabel12)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel7)
-                                .addComponent(jLabel9))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(cmFinanciamineto, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cbMesSaldo, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cbMesInicioMensualidad, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cbMesAnticipo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
-                                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
-                                            .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(cbCliente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(dtFechaVenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(cbMetodoPago, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(txtPrecioFinalVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGap(64, 64, 64)
-                                            .addComponent(jLabel13))
-                                        .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
-                                            .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(txtSaldo)
-                                                .addComponent(txtAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGap(56, 56, 56)
-                                            .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))))
-                                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
-                                            .addGap(18, 18, 18)
-                                            .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(txtPrecioSugerido, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(cbMensualidades, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(txtPorcentMensualidades, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlVentasUnidadesLayout.createSequentialGroup()
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
-                                            .addComponent(btnAddNew))))))
-                        .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
-                            .addGap(775, 775, 775)
-                            .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(1038, Short.MAX_VALUE)
+                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnGuardar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnAddNew, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addContainerGap()))
         );
         pnlVentasUnidadesLayout.setVerticalGroup(
             pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 653, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlVentasUnidadesLayout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlVentasUnidadesLayout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13)
+                            .addComponent(txtPrecioSugerido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlVentasUnidadesLayout.createSequentialGroup()
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cbCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))
+                        .addGap(10, 10, 10)
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(dtFechaVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cbMetodoPago, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addGap(10, 10, 10)
+                        .addComponent(cbMetodoPago1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtPrecioFinalVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))))
+                .addGap(10, 10, 10)
+                .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbMesAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10))
+                .addGap(10, 10, 10)
+                .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cbMensualidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8))
+                        .addGap(10, 10, 10)
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel15)
+                            .addComponent(txtAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(txtAnticipo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(txtSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
+                                .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtAnticipo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dtFechaVenta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(11, 11, 11)
+                                .addComponent(txtAnticipo3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(dtFechaVenta3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtSaldo1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dtFechaVenta2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(263, 263, 263))
             .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
-                            .addGap(22, 22, 22)
-                            .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
-                                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel1)
-                                        .addComponent(cbCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(29, 29, 29)
-                                    .addComponent(jLabel2))
-                                .addComponent(dtFechaVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(btnAddNew))
-                    .addGap(14, 14, 14)
-                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3)
-                        .addComponent(cbMetodoPago, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
-                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel4)
-                        .addComponent(txtPrecioFinalVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel13)
-                        .addComponent(txtPrecioSugerido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(24, 24, 24)
-                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel10)
-                        .addComponent(cbMesAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel11)
-                        .addComponent(cbMesInicioMensualidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
-                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel12)
-                        .addComponent(cbMesSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(27, 27, 27)
-                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel5)
-                        .addComponent(cmFinanciamineto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(28, 28, 28)
-                    .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
-                            .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel7)
-                                .addComponent(jLabel6)
-                                .addComponent(txtAnticipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtPorcentMensualidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(21, 21, 21)
-                            .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel9)
-                                .addComponent(txtSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(pnlVentasUnidadesLayout.createSequentialGroup()
-                            .addGap(42, 42, 42)
-                            .addGroup(pnlVentasUnidadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel8)
-                                .addComponent(cbMensualidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGap(121, 121, 121)
+                    .addComponent(btnAddNew)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 644, Short.MAX_VALUE)
                     .addComponent(btnGuardar)
                     .addContainerGap()))
         );
@@ -332,29 +378,31 @@ public class VentaUnidades extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbCliente;
     private javax.swing.JSpinner cbMensualidades;
     private javax.swing.JComboBox<String> cbMesAnticipo;
-    private javax.swing.JComboBox<String> cbMesInicioMensualidad;
-    private javax.swing.JComboBox<String> cbMesSaldo;
     private javax.swing.JComboBox<String> cbMetodoPago;
-    private javax.swing.JComboBox<String> cmFinanciamineto;
+    private javax.swing.JComboBox<String> cbMetodoPago1;
     private com.toedter.calendar.JDateChooser dtFechaVenta;
+    private com.toedter.calendar.JDateChooser dtFechaVenta1;
+    private com.toedter.calendar.JDateChooser dtFechaVenta2;
+    private com.toedter.calendar.JDateChooser dtFechaVenta3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel pnlVentasUnidades;
     private javax.swing.JTextField txtAnticipo;
-    private javax.swing.JTextField txtPorcentMensualidades;
+    private javax.swing.JTextField txtAnticipo1;
+    private javax.swing.JTextField txtAnticipo2;
+    private javax.swing.JTextField txtAnticipo3;
     private javax.swing.JTextField txtPrecioFinalVenta;
     private javax.swing.JTextField txtPrecioSugerido;
     private javax.swing.JTextField txtSaldo;
+    private javax.swing.JTextField txtSaldo1;
     // End of variables declaration//GEN-END:variables
 }

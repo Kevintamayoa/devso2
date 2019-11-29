@@ -27,15 +27,15 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         initComponents();
- con=new Conexion();
-   con.Conectar();
- // users=con.GetUsers();
-   con.Desconectar();
-     
-    users.forEach((obj) -> {vector.add(obj.Name);});
-    AutoCompleteJComboBox combo = new AutoCompleteJComboBox(new StringSearcheable(vector),cbxUser);
-    
-  
+// con=new Conexion();
+//   con.Conectar();
+// // users=con.GetUsers();
+//   con.Desconectar();
+//     
+//    users.forEach((obj) -> {vector.add(obj.Name);});
+//    AutoCompleteJComboBox combo = new AutoCompleteJComboBox(new StringSearcheable(vector),cbxUser);
+//    
+//  
     }
     Conexion con;
     List<User> users;
@@ -171,18 +171,20 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        try{
+     //   try{
             
-            User user = users.stream()
-            .filter(obj -> cbxUser.getSelectedItem().toString().equals(obj.Name))
-            .findAny()
-            .orElse(null);
-            if(user.Password.equals(txtPassword.getText()))
-            {
-                Save.TemporalUser=user;
-                JOptionPane.showMessageDialog(this,"Acceso concedido.");
-            }
-        }catch(Exception e){}
+//            User user = users.stream()
+//            .filter(obj -> cbxUser.getSelectedItem().toString().equals(obj.Name))
+//            .findAny()
+//            .orElse(null);
+//            if(user.Password.equals(txtPassword.getText()))
+//            {
+//                Save.TemporalUser=user;
+//                JOptionPane.showMessageDialog(this,"Acceso concedido.");
+//            }
+interfaz a=new interfaz();
+a.setVisible(true);
+    //    }catch(Exception e){}
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -30,33 +30,33 @@ public class TotalCajas extends javax.swing.JFrame {
      */
     public TotalCajas() {
         initComponents();
-         setIconImage (new ImageIcon(getClass().getResource("Images/Screenshot_1.png")).getImage());
-    setIconImage (new ImageIcon(getClass().getResource("Images/Screenshot_1.png")).getImage());
+//         setIconImage (new ImageIcon(getClass().getResource("Images/Screenshot_1.png")).getImage());
+//    setIconImage (new ImageIcon(getClass().getResource("Images/Screenshot_1.png")).getImage());
     table.getTableHeader().setBackground(Color.white);
         table.getTableHeader().setForeground(Color.black);
         table.getTableHeader().setFont(new Font("InaiMathi", 0, 24)); 
         table.getColumnModel().getColumn(2).setCellRenderer(new CurrencyCellRenderer());
         this.setTitle("Saldo total en cajas");
-        try
-        {
-        con=new Conexion();
-        model=(DefaultTableModel)table.getModel();
-        con.Conectar();
-        if(Save.TemporalUser.Id==1){
-          cuentas=con.GetSaldoAccounts();  
-        }else{
-          cuentas=con.GetSaldoAccounts2();    
-        }
-        
-        for(Account cuenta :cuentas){
- 
-        
-           //model.addRow(new Object[]{cuenta.Id,cuenta.Description,cuenta.Inicial});
-        }
-           con.Desconectar(); 
-        }catch(Exception e){
-           
-           }
+//        try
+//        {
+//        con=new Conexion();
+//        model=(DefaultTableModel)table.getModel();
+//        con.Conectar();
+//        if(Save.TemporalUser.Id==1){
+//          cuentas=con.GetSaldoAccounts();  
+//        }else{
+//          cuentas=con.GetSaldoAccounts2();    
+//        }
+//        
+//        for(Account cuenta :cuentas){
+// 
+//        
+//           //model.addRow(new Object[]{cuenta.Id,cuenta.Description,cuenta.Inicial});
+//        }
+//           con.Desconectar(); 
+//        }catch(Exception e){
+//           
+//           }
     }
     Conexion con;
     private DefaultTableModel model;
@@ -97,7 +97,7 @@ public class TotalCajas extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(47, 51, 66));
 
         table.setBackground(new java.awt.Color(253, 239, 229));
         table.setFont(new java.awt.Font("InaiMathi", 0, 24)); // NOI18N
@@ -133,7 +133,6 @@ public class TotalCajas extends javax.swing.JFrame {
         table.setSelectionBackground(new java.awt.Color(204, 204, 204));
         table.setSelectionForeground(new java.awt.Color(0, 0, 0));
         table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        table.setShowGrid(true);
         table.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 tableMouseReleased(evt);
@@ -149,7 +148,7 @@ public class TotalCajas extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("InaiMathi", 1, 20)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Saldo total en cajas");
 
@@ -172,10 +171,10 @@ public class TotalCajas extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jMenuBar1.setBackground(new java.awt.Color(255, 248, 245));
+        jMenuBar1.setBackground(new java.awt.Color(204, 204, 204));
         jMenuBar1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
 
-        jMenu2.setBackground(new java.awt.Color(255, 248, 245));
+        jMenu2.setBackground(new java.awt.Color(204, 204, 204));
         jMenu2.setForeground(new java.awt.Color(51, 51, 51));
         jMenu2.setText("Exportar");
 

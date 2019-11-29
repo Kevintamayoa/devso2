@@ -165,7 +165,7 @@ TableRowSorter trs;
             }
         });
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(47, 51, 66));
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jPanel3MouseReleased(evt);
@@ -185,10 +185,10 @@ TableRowSorter trs;
 
         txtBuscar.setBackground(new java.awt.Color(255, 255, 255));
         txtBuscar.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        txtBuscar.setForeground(new java.awt.Color(51, 51, 51));
+        txtBuscar.setForeground(new java.awt.Color(255, 255, 255));
         txtBuscar.setText("Buscar:");
 
-        table.setBackground(new java.awt.Color(253, 239, 229));
+        table.setBackground(new java.awt.Color(204, 204, 204));
         table.setFont(new java.awt.Font("InaiMathi", 0, 18)); // NOI18N
         table.setForeground(new java.awt.Color(0, 0, 0));
         table.setModel(new javax.swing.table.DefaultTableModel(
@@ -222,7 +222,6 @@ TableRowSorter trs;
         table.setSelectionBackground(new java.awt.Color(204, 204, 204));
         table.setSelectionForeground(new java.awt.Color(0, 0, 0));
         table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        table.setShowGrid(true);
         table.setVerifyInputWhenFocusTarget(false);
         table.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
@@ -234,9 +233,9 @@ TableRowSorter trs;
         });
         jScrollPane4.setViewportView(table);
 
-        btnNuevoCliente.setBackground(new java.awt.Color(217, 234, 220));
+        btnNuevoCliente.setBackground(new java.awt.Color(123, 163, 186));
         btnNuevoCliente.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        btnNuevoCliente.setForeground(new java.awt.Color(51, 51, 51));
+        btnNuevoCliente.setForeground(new java.awt.Color(255, 255, 255));
         btnNuevoCliente.setText("Agregar nuevo cliente");
         btnNuevoCliente.setToolTipText("");
         btnNuevoCliente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(145, 146, 147)));
@@ -249,7 +248,7 @@ TableRowSorter trs;
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("InaiMathi", 1, 20)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Saldo de clientes");
 
@@ -284,10 +283,10 @@ TableRowSorter trs;
                 .addContainerGap())
         );
 
-        jMenuBar1.setBackground(new java.awt.Color(255, 248, 245));
+        jMenuBar1.setBackground(new java.awt.Color(204, 204, 204));
         jMenuBar1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
 
-        jMenu2.setBackground(new java.awt.Color(255, 248, 245));
+        jMenu2.setBackground(new java.awt.Color(204, 204, 204));
         jMenu2.setForeground(new java.awt.Color(51, 51, 51));
         jMenu2.setText("Exportar");
 

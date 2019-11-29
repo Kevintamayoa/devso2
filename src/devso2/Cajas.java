@@ -87,7 +87,7 @@ double inicial;
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Saldo en cajas");
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(47, 51, 66));
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jPanel3MouseReleased(evt);
@@ -96,22 +96,22 @@ double inicial;
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("InaiMathi", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Saldo en cajas");
 
         txtBuscar.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        txtBuscar.setForeground(new java.awt.Color(51, 51, 51));
+        txtBuscar.setForeground(new java.awt.Color(255, 255, 255));
         txtBuscar.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         txtBuscar.setText("Mes");
 
-        cbxFiltro.setBackground(new java.awt.Color(255, 248, 245));
+        cbxFiltro.setBackground(new java.awt.Color(255, 255, 255));
         cbxFiltro.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
         cbxFiltro.setForeground(new java.awt.Color(51, 51, 51));
         cbxFiltro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2019", "2020" }));
 
         jLabel4.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel4.setText("Año");
 
@@ -147,17 +147,16 @@ double inicial;
         table.setRowHeight(25);
         table.setSelectionBackground(new java.awt.Color(204, 204, 204));
         table.setSelectionForeground(new java.awt.Color(0, 0, 0));
-        table.setShowGrid(true);
         jScrollPane1.setViewportView(table);
 
-        cbxFiltro1.setBackground(new java.awt.Color(255, 248, 245));
+        cbxFiltro1.setBackground(new java.awt.Color(255, 255, 255));
         cbxFiltro1.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
         cbxFiltro1.setForeground(new java.awt.Color(51, 51, 51));
         cbxFiltro1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" }));
 
-        jButton1.setBackground(new java.awt.Color(255, 248, 245));
+        jButton1.setBackground(new java.awt.Color(123, 163, 186));
         jButton1.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(51, 51, 51));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Cargar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,10 +204,10 @@ double inicial;
                 .addContainerGap())
         );
 
-        jMenuBar1.setBackground(new java.awt.Color(255, 248, 245));
+        jMenuBar1.setBackground(new java.awt.Color(204, 204, 204));
         jMenuBar1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
 
-        jMenu2.setBackground(new java.awt.Color(255, 248, 245));
+        jMenu2.setBackground(new java.awt.Color(204, 204, 204));
         jMenu2.setForeground(new java.awt.Color(51, 51, 51));
         jMenu2.setText("Exportar");
 
@@ -249,17 +248,17 @@ double inicial;
                 {
                     model.removeRow(0);
                 }
-        con = new Conexion();        
-        con.Conectar();        
-        try {
-            incomes = con.GetIncomesByMonthYear(mes,ano, Save.account.Id);
-            expenses = con.GetExpensesByMonthYear(mes, ano, Save.account.Id);
-            moves = con.GetMovesCajasByMonthYear(mes, ano, Save.account.Id);
-            inicial=con.GetSaldoInicial(mes,ano, Save.account.Id);
-            
-        } catch (SQLException ex) {
-        }
-        con.Desconectar();
+//        con = new Conexion();        
+//        con.Conectar();        
+//        try {
+//            incomes = con.GetIncomesByMonthYear(mes,ano, Save.account.Id);
+//            expenses = con.GetExpensesByMonthYear(mes, ano, Save.account.Id);
+//            moves = con.GetMovesCajasByMonthYear(mes, ano, Save.account.Id);
+//            inicial=con.GetSaldoInicial(mes,ano, Save.account.Id);
+//            
+//        } catch (SQLException ex) {
+//        }
+//        con.Desconectar();
         EstadoCuenta edo=new EstadoCuenta();
         edo.EstadoCuenta(incomes, expenses, moves, Save.account.Id,inicial);
         int i=0;

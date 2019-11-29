@@ -133,7 +133,7 @@ public class RegistroEgresos extends javax.swing.JDialog {
             }
         });
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(47, 51, 66));
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jPanel3MouseReleased(evt);
@@ -142,11 +142,11 @@ public class RegistroEgresos extends javax.swing.JDialog {
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("InaiMathi", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Registro de egresos");
 
-        tableEgresos.setBackground(new java.awt.Color(253, 239, 229));
+        tableEgresos.setBackground(new java.awt.Color(204, 204, 204));
         tableEgresos.setFont(new java.awt.Font("InaiMathi", 0, 18)); // NOI18N
         tableEgresos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -178,7 +178,6 @@ public class RegistroEgresos extends javax.swing.JDialog {
         tableEgresos.setRowHeight(22);
         tableEgresos.setSelectionBackground(new java.awt.Color(204, 204, 204));
         tableEgresos.setSelectionForeground(new java.awt.Color(0, 0, 0));
-        tableEgresos.setShowGrid(true);
         tableEgresos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 tableEgresosMouseReleased(evt);
@@ -186,7 +185,7 @@ public class RegistroEgresos extends javax.swing.JDialog {
         });
         jScrollPane1.setViewportView(tableEgresos);
 
-        txtBusqueda.setBackground(new java.awt.Color(255, 248, 245));
+        txtBusqueda.setBackground(new java.awt.Color(255, 255, 255));
         txtBusqueda.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         txtBusqueda.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
         txtBusqueda.setForeground(new java.awt.Color(51, 51, 51));
@@ -198,16 +197,16 @@ public class RegistroEgresos extends javax.swing.JDialog {
         jScrollPane2.setViewportView(txtBusqueda);
 
         txtBuscar.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        txtBuscar.setForeground(new java.awt.Color(51, 51, 51));
+        txtBuscar.setForeground(new java.awt.Color(255, 255, 255));
         txtBuscar.setText("Buscar:");
 
-        cbxFiltro.setBackground(new java.awt.Color(255, 248, 245));
+        cbxFiltro.setBackground(new java.awt.Color(255, 255, 255));
         cbxFiltro.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
         cbxFiltro.setForeground(new java.awt.Color(51, 51, 51));
         cbxFiltro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Id", "Fecha", "Categoría", "Detalle", "Tipo de pago", "Cuenta", "Factura", "No. de Factura", "Monto Total", "Iva", "Monto sin iva" }));
 
         jLabel2.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("En:");
 
         btnAgregarPago.setBackground(new java.awt.Color(217, 234, 220));
@@ -236,7 +235,7 @@ public class RegistroEgresos extends javax.swing.JDialog {
         jScrollPane7.setViewportView(txtSaldo);
 
         lblSaldo.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        lblSaldo.setForeground(new java.awt.Color(51, 51, 51));
+        lblSaldo.setForeground(new java.awt.Color(255, 255, 255));
         lblSaldo.setText("Saldo:");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -256,8 +255,8 @@ public class RegistroEgresos extends javax.swing.JDialog {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(cbxFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(49, 49, 49)
@@ -283,10 +282,10 @@ public class RegistroEgresos extends javax.swing.JDialog {
                 .addContainerGap())
         );
 
-        jMenuBar1.setBackground(new java.awt.Color(255, 248, 245));
+        jMenuBar1.setBackground(new java.awt.Color(204, 204, 204));
         jMenuBar1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
 
-        jMenu2.setBackground(new java.awt.Color(255, 248, 245));
+        jMenu2.setBackground(new java.awt.Color(204, 204, 204));
         jMenu2.setForeground(new java.awt.Color(51, 51, 51));
         jMenu2.setText("Exportar");
 

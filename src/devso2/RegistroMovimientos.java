@@ -125,7 +125,7 @@ public class RegistroMovimientos extends javax.swing.JFrame {
             }
         });
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(47, 51, 66));
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jPanel4MouseReleased(evt);
@@ -134,11 +134,11 @@ public class RegistroMovimientos extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("InaiMathi", 1, 20)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Registro de movimiento de cajas");
 
-        txtBusqueda1.setBackground(new java.awt.Color(255, 248, 245));
+        txtBusqueda1.setBackground(new java.awt.Color(255, 255, 255));
         txtBusqueda1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         txtBusqueda1.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
         txtBusqueda1.setForeground(new java.awt.Color(51, 51, 51));
@@ -150,19 +150,19 @@ public class RegistroMovimientos extends javax.swing.JFrame {
         jScrollPane6.setViewportView(txtBusqueda1);
 
         txtBuscar.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        txtBuscar.setForeground(new java.awt.Color(51, 51, 51));
+        txtBuscar.setForeground(new java.awt.Color(255, 255, 255));
         txtBuscar.setText("Buscar:");
 
-        cbxFiltro1.setBackground(new java.awt.Color(255, 248, 245));
+        cbxFiltro1.setBackground(new java.awt.Color(255, 255, 255));
         cbxFiltro1.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
         cbxFiltro1.setForeground(new java.awt.Color(51, 51, 51));
         cbxFiltro1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Id", "Fecha", "Cuenta de salida", "Cuenta de entrada", "Detalle", "Monto total" }));
 
         jLabel8.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("En:");
 
-        tableEgresos.setBackground(new java.awt.Color(253, 239, 229));
+        tableEgresos.setBackground(new java.awt.Color(204, 204, 204));
         tableEgresos.setFont(new java.awt.Font("InaiMathi", 0, 18)); // NOI18N
         tableEgresos.setForeground(new java.awt.Color(0, 0, 0));
         tableEgresos.setModel(new javax.swing.table.DefaultTableModel(
@@ -234,10 +234,10 @@ public class RegistroMovimientos extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jMenuBar1.setBackground(new java.awt.Color(255, 248, 245));
+        jMenuBar1.setBackground(new java.awt.Color(204, 204, 204));
         jMenuBar1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
 
-        jMenu2.setBackground(new java.awt.Color(255, 248, 245));
+        jMenu2.setBackground(new java.awt.Color(204, 204, 204));
         jMenu2.setForeground(new java.awt.Color(51, 51, 51));
         jMenu2.setText("Exportar");
 

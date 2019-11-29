@@ -140,7 +140,7 @@ public class RegistroIngresos extends javax.swing.JDialog {
             }
         });
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(47, 51, 66));
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jPanel4MouseReleased(evt);
@@ -149,11 +149,11 @@ public class RegistroIngresos extends javax.swing.JDialog {
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("InaiMathi", 1, 20)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Registro de ingresos");
 
-        txtBusqueda.setBackground(new java.awt.Color(255, 248, 245));
+        txtBusqueda.setBackground(new java.awt.Color(255, 255, 255));
         txtBusqueda.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         txtBusqueda.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
         txtBusqueda.setForeground(new java.awt.Color(51, 51, 51));
@@ -165,16 +165,16 @@ public class RegistroIngresos extends javax.swing.JDialog {
         jScrollPane6.setViewportView(txtBusqueda);
 
         txtBuscar.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        txtBuscar.setForeground(new java.awt.Color(51, 51, 51));
+        txtBuscar.setForeground(new java.awt.Color(255, 255, 255));
         txtBuscar.setText("Buscar:");
 
-        cbxFiltro.setBackground(new java.awt.Color(255, 248, 245));
+        cbxFiltro.setBackground(new java.awt.Color(255, 255, 255));
         cbxFiltro.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
         cbxFiltro.setForeground(new java.awt.Color(51, 51, 51));
         cbxFiltro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Id", "Fecha", "Categoría", "Cliente", "Detalle", "Tipo de pago", "Cuenta", "Factura", "No. de Factura", "Monto Total", "Iva", "Monto sin iva" }));
 
         jLabel8.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("En:");
 
         btnAgregarPago.setBackground(new java.awt.Color(217, 234, 220));
@@ -203,10 +203,10 @@ public class RegistroIngresos extends javax.swing.JDialog {
         jScrollPane7.setViewportView(txtSaldo);
 
         lblSaldo.setFont(new java.awt.Font("InaiMathi", 0, 14)); // NOI18N
-        lblSaldo.setForeground(new java.awt.Color(51, 51, 51));
+        lblSaldo.setForeground(new java.awt.Color(255, 255, 255));
         lblSaldo.setText("Saldo:");
 
-        tableIngresos.setBackground(new java.awt.Color(253, 239, 229));
+        tableIngresos.setBackground(new java.awt.Color(204, 204, 204));
         tableIngresos.setFont(new java.awt.Font("InaiMathi", 0, 18)); // NOI18N
         tableIngresos.setForeground(new java.awt.Color(0, 0, 0));
         tableIngresos.setModel(new javax.swing.table.DefaultTableModel(
@@ -238,7 +238,6 @@ public class RegistroIngresos extends javax.swing.JDialog {
         tableIngresos.setRowHeight(22);
         tableIngresos.setSelectionBackground(new java.awt.Color(204, 204, 204));
         tableIngresos.setSelectionForeground(new java.awt.Color(0, 0, 0));
-        tableIngresos.setShowGrid(true);
         tableIngresos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 tableIngresosMousePressed(evt);
@@ -262,8 +261,8 @@ public class RegistroIngresos extends javax.swing.JDialog {
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(cbxFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                        .addComponent(lblSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblSaldo, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
                         .addGap(33, 33, 33)
                         .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28)
@@ -289,10 +288,10 @@ public class RegistroIngresos extends javax.swing.JDialog {
                 .addContainerGap())
         );
 
-        jMenuBar1.setBackground(new java.awt.Color(255, 248, 245));
+        jMenuBar1.setBackground(new java.awt.Color(204, 204, 204));
         jMenuBar1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
 
-        jMenu2.setBackground(new java.awt.Color(255, 248, 245));
+        jMenu2.setBackground(new java.awt.Color(204, 204, 204));
         jMenu2.setForeground(new java.awt.Color(51, 51, 51));
         jMenu2.setText("Exportar");
 

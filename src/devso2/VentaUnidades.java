@@ -9,7 +9,7 @@ package devso2;
  *
  * @author xchel
  */
-public class VentaUnidades extends javax.swing.JFrame {
+public class VentaUnidades extends javax.swing.JDialog {
 
     /**
      * Creates new form VentaUnidades

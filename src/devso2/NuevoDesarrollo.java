@@ -77,7 +77,7 @@ cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
         pnlInfo.setVisible(true);
         btnInfoGeneral.setSelected(true);
         //Configuración tabla sembrado
-         tableSembrado.getTableHeader().setBackground(new Color(123,193,165));
+         tableSembrado.getTableHeader().setBackground(new Color(123,163,186));
         tableSembrado.getTableHeader().setForeground(Color.black);
         tableSembrado.getTableHeader().setFont(new Font("InaiMathi", 0, 20));
         //Precios
@@ -106,7 +106,7 @@ cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
         //FIN DE TABLA SEMBRADO
         
         //CONFIGURACIÓN TABLA PROJECT MANAGER
-        tableProjectManaguers.getTableHeader().setBackground(new Color(123,193,165));
+        tableProjectManaguers.getTableHeader().setBackground(new Color(123,163,186));
         tableProjectManaguers.getTableHeader().setForeground(Color.black);
         tableProjectManaguers.getTableHeader().setFont(new Font("InaiMathi", 0, 20));
        
@@ -114,35 +114,35 @@ cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
         //End CONFIG PROJECT MANAGER
         
         //CONFIGURACIÓN TABLA ADMINS
-      tableAdmins.getTableHeader().setBackground(new Color(123,193,165));
+      tableAdmins.getTableHeader().setBackground(new Color(123,163,186));
         tableAdmins.getTableHeader().setForeground(Color.black);
         tableAdmins.getTableHeader().setFont(new Font("InaiMathi", 0, 20));
        
         tableAdmins.getColumnModel().getColumn(1).setCellRenderer(tcr);
         
         //CONFIGURACIÓN TABLA INVERSIONES
-        tableInversiones.getTableHeader().setBackground(new Color(123,193,165));
+        tableInversiones.getTableHeader().setBackground(new Color(123,163,186));
         tableInversiones.getTableHeader().setForeground(Color.black);
         tableInversiones.getTableHeader().setFont(new Font("InaiMathi", 0, 20));
        
         tableInversiones.getColumnModel().getColumn(1).setCellRenderer(tcr);
         
         //CONFIGURACIÓN TABLA CREDITO
-        tableCredito.getTableHeader().setBackground(new Color(123,193,165));
+        tableCredito.getTableHeader().setBackground(new Color(123,163,186));
         tableCredito.getTableHeader().setForeground(Color.black);
         tableCredito.getTableHeader().setFont(new Font("InaiMathi", 0, 20));
        
         tableCredito.getColumnModel().getColumn(1).setCellRenderer(tcr);
         
         //config TABLA EGRESOS
-        tableEgresos.getTableHeader().setBackground(new Color(123,193,165));
+        tableEgresos.getTableHeader().setBackground(new Color(123,163,186));
         tableEgresos.getTableHeader().setForeground(Color.black);
         tableEgresos.getTableHeader().setFont(new Font("InaiMathi", 0, 20));
        
         tableEgresos.getColumnModel().getColumn(1).setCellRenderer(tcr);
         tableEgresos.getColumnModel().getColumn(2).setCellRenderer(tcr);
         //config TABLA INGRESOS
-        tableIngresos.getTableHeader().setBackground(new Color(123,193,165));
+        tableIngresos.getTableHeader().setBackground(new Color(123,163,186));
         tableIngresos.getTableHeader().setForeground(Color.black);
         tableIngresos.getTableHeader().setFont(new Font("InaiMathi", 0, 20));
        
@@ -150,13 +150,13 @@ cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
         tableEgresos.getColumnModel().getColumn(2).setCellRenderer(tcr);
         
         //config TABLA CUENTAS
-        tableCuentas.getTableHeader().setBackground(new Color(123,193,165));
+        tableCuentas.getTableHeader().setBackground(new Color(123,163,186));
         tableCuentas.getTableHeader().setForeground(Color.black);
         tableCuentas.getTableHeader().setFont(new Font("InaiMathi", 0, 20));
        
         tableCuentas.getColumnModel().getColumn(1).setCellRenderer(tcr);
         tableCuentas.getColumnModel().getColumn(2).setCellRenderer(tcr);
-      
+      tableSembrado.setBackground(Color.gray);
     }
 
     /**
@@ -1114,7 +1114,7 @@ cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
                     .addGroup(pnlCreditoLayout.createSequentialGroup()
                         .addGap(501, 501, 501)
                         .addComponent(jLabel19)))
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         pnlCreditoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtCredito, txtMontototalCredito, txtTasadeInteres});
@@ -1194,7 +1194,7 @@ cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
                 .addGroup(pnlCreditoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 133, Short.MAX_VALUE))
+                .addGap(0, 180, Short.MAX_VALUE))
         );
 
         pnlCreditoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtCredito, txtMontototalCredito, txtTasadeInteres});

@@ -21,7 +21,7 @@ public class CargarEtapa extends javax.swing.JDialog {
     public CargarEtapa() {
         initComponents();
         
-        tableCargarEtapa.getTableHeader().setBackground(Color.white);
+        tableCargarEtapa.getTableHeader().setBackground(new Color(123,163,186));
         tableCargarEtapa.getTableHeader().setForeground(Color.black);
         tableCargarEtapa.getTableHeader().setFont(new Font("InaiMathi", 0, 20));
         DefaultTableCellRenderer tcr = new DefaultTableCellRenderer();

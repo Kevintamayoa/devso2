@@ -21,7 +21,7 @@ public class CargarModelo extends javax.swing.JDialog {
     public CargarModelo() {
         initComponents();
         
-        tableCargarModelos.getTableHeader().setBackground(Color.white);
+        tableCargarModelos.getTableHeader().setBackground(new Color(123,163,186));
         tableCargarModelos.getTableHeader().setForeground(Color.black);
         tableCargarModelos.getTableHeader().setFont(new Font("InaiMathi", 0, 20));
         DefaultTableCellRenderer tcr = new DefaultTableCellRenderer();

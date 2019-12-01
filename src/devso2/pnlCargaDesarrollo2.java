@@ -277,6 +277,11 @@ public class pnlCargaDesarrollo2 extends javax.swing.JPanel {
         btnAddPlanPago1.setText("Agregar plan de pago");
         btnAddPlanPago1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAddPlanPago1.setBorderPainted(false);
+        btnAddPlanPago1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddPlanPago1ActionPerformed(evt);
+            }
+        });
 
         btnMovCaja2.setFont(new java.awt.Font("Malgun Gothic", 1, 16)); // NOI18N
         btnMovCaja2.setText("Movimiento de caja");
@@ -1141,6 +1146,10 @@ public class pnlCargaDesarrollo2 extends javax.swing.JPanel {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_cbCategoriaActionPerformed
+
+    private void btnAddPlanPago1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPlanPago1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddPlanPago1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

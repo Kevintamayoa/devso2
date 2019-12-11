@@ -148,7 +148,7 @@ public class interfaz extends javax.swing.JFrame {
         tlbrCargarDesarrollo = new javax.swing.JMenuItem();
         tlbrAdministración = new javax.swing.JMenuItem();
 
-        btnVender.setText("jMenuItem1");
+        btnVender.setText("Realizar venta");
         btnVender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVenderActionPerformed(evt);
@@ -558,10 +558,14 @@ public class interfaz extends javax.swing.JFrame {
                 .addGroup(PnlMenuSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnMovCaja, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(PnlMenuSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(PnlMenuSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PnlMenuSuperiorLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 575, Short.MAX_VALUE)
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMenuSuperiorLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0))))
         );
         PnlMenuSuperiorLayout.setVerticalGroup(
             PnlMenuSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -732,9 +736,9 @@ public class interfaz extends javax.swing.JFrame {
                             .addComponent(txtNumFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtIVA, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtMontoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtMontoNoIVA, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+                            .addComponent(txtMontoNoIVA, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE)
                             .addComponent(txtMontoIVA))
-                        .addGap(191, 191, Short.MAX_VALUE))
+                        .addGap(314, 314, Short.MAX_VALUE))
                     .addGroup(pnlIngresosLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(rdFacturaYes)
@@ -1083,24 +1087,24 @@ public class interfaz extends javax.swing.JFrame {
             pnlMovCajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlMovCajaLayout.createSequentialGroup()
                 .addGroup(pnlMovCajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlMovCajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(pnlMovCajaLayout.createSequentialGroup()
-                            .addComponent(jLabel25)
-                            .addGap(24, 24, 24)
-                            .addComponent(dtFecha2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(pnlMovCajaLayout.createSequentialGroup()
-                            .addContainerGap()
+                    .addGroup(pnlMovCajaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(pnlMovCajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlMovCajaLayout.createSequentialGroup()
+                                .addComponent(jLabel25)
+                                .addGap(24, 24, 24)
+                                .addComponent(dtFecha2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pnlMovCajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMovCajaLayout.createSequentialGroup()
                                     .addGap(142, 142, 142)
                                     .addComponent(txtConcepto5, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(pnlMovCajaLayout.createSequentialGroup()
                                     .addComponent(jLabel39)
-                                    .addGap(282, 282, 282))))
-                        .addGroup(pnlMovCajaLayout.createSequentialGroup()
-                            .addComponent(jLabel36)
-                            .addGap(18, 18, 18)
-                            .addComponent(cbCategoriaEgresos1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGap(282, 282, 282)))
+                            .addGroup(pnlMovCajaLayout.createSequentialGroup()
+                                .addComponent(jLabel36)
+                                .addGap(18, 18, 18)
+                                .addComponent(cbCategoriaEgresos1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(pnlMovCajaLayout.createSequentialGroup()
                         .addGap(436, 436, 436)
                         .addComponent(btnGuardar3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1151,7 +1155,7 @@ public class interfaz extends javax.swing.JFrame {
             .addComponent(PnlMenuSuperior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(pnlIngresos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnlEgresos, javax.swing.GroupLayout.DEFAULT_SIZE, 1056, Short.MAX_VALUE))
+                .addComponent(pnlEgresos, javax.swing.GroupLayout.DEFAULT_SIZE, 836, Short.MAX_VALUE))
             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(pnlMovCaja, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -1202,48 +1206,48 @@ public class interfaz extends javax.swing.JFrame {
             .addGap(0, 1068, Short.MAX_VALUE)
             .addGroup(pnlOpcionesInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlOpcionesInterfazLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(pnlVentas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(12, 12, 12)
+                    .addComponent(pnlVentas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(12, 12, 12)))
             .addGroup(pnlOpcionesInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlOpcionesInterfazLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(pnlDesarrollo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(9, 9, 9)
+                    .addComponent(pnlDesarrollo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(9, 9, 9)))
             .addGroup(pnlOpcionesInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlOpcionesInterfazLayout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlMovimientos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addContainerGap()
+                    .addComponent(pnlMovimientos, javax.swing.GroupLayout.DEFAULT_SIZE, 836, Short.MAX_VALUE)
+                    .addContainerGap()))
             .addGroup(pnlOpcionesInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlOpcionesInterfazLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(pnlReportes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(12, 12, 12)
+                    .addComponent(pnlReportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(12, 12, 12)))
         );
         pnlOpcionesInterfazLayout.setVerticalGroup(
             pnlOpcionesInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 985, Short.MAX_VALUE)
             .addGroup(pnlOpcionesInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlOpcionesInterfazLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(pnlVentas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(69, 69, 69)
+                    .addComponent(pnlVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 738, Short.MAX_VALUE)
+                    .addGap(70, 70, 70)))
             .addGroup(pnlOpcionesInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlOpcionesInterfazLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(pnlDesarrollo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(9, 9, 9)
+                    .addComponent(pnlDesarrollo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(9, 9, 9)))
             .addGroup(pnlOpcionesInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlOpcionesInterfazLayout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlMovimientos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addContainerGap()
+                    .addComponent(pnlMovimientos, javax.swing.GroupLayout.DEFAULT_SIZE, 853, Short.MAX_VALUE)
+                    .addContainerGap()))
             .addGroup(pnlOpcionesInterfazLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlOpcionesInterfazLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(pnlReportes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(12, 12, 12)
+                    .addComponent(pnlReportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(12, 12, 12)))
         );
 
         javax.swing.GroupLayout pnlViewLayout = new javax.swing.GroupLayout(pnlView);
@@ -1269,13 +1273,13 @@ public class interfaz extends javax.swing.JFrame {
         pnlViewMain.setLayout(pnlViewMainLayout);
         pnlViewMainLayout.setHorizontalGroup(
             pnlViewMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlView, javax.swing.GroupLayout.DEFAULT_SIZE, 966, Short.MAX_VALUE)
+            .addComponent(pnlView, javax.swing.GroupLayout.PREFERRED_SIZE, 966, Short.MAX_VALUE)
         );
         pnlViewMainLayout.setVerticalGroup(
             pnlViewMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlViewMainLayout.createSequentialGroup()
-                .addComponent(pnlView, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(pnlView, javax.swing.GroupLayout.PREFERRED_SIZE, 660, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         jMenu1.setText("Archivo");
@@ -1434,7 +1438,9 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistroActionPerformed
 
     private void btnEditProjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditProjectActionPerformed
-        // TODO add your handling code here:
+  NuevoDesarrollo rm = new NuevoDesarrollo();
+              rm.setVisible(true);
+              // TODO add your handling code here:
     }//GEN-LAST:event_btnEditProjectActionPerformed
 
     private void tableVentasMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableVentasMouseReleased

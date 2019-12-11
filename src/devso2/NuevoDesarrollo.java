@@ -298,7 +298,6 @@ cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
         btnEliminarSembrado.setText("Eliminar");
         menuSembrado.add(btnEliminarSembrado);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(255, 255, 255));
         setFont(new java.awt.Font("Malgun Gothic", 0, 14)); // NOI18N
@@ -1539,7 +1538,7 @@ cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(9, 9, 9))
-                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 668, Short.MAX_VALUE))
                 .addGap(5, 5, 5))
         );
 
@@ -1556,7 +1555,7 @@ cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1608,7 +1607,7 @@ cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
             btnCredito.setBackground(new Color(123,163,186));
             btnSembrado.setBackground(new Color(123,163,186));
              btnInfoGeneral.setBackground(new Color(123,163,186));
-            
+
            
             
     }//GEN-LAST:event_btnCatalogoActionPerformed

@@ -10,9 +10,12 @@ import Adicionales.StringSearcheable;
 import Classes.Save;
 import Classes.User;
 import Conexion.Conexion;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
@@ -25,16 +28,17 @@ public class login extends javax.swing.JFrame {
     /**
      * Creates new form login
      */
-    public login() {
+    public login() throws SQLException {
         initComponents();
-// con=new Conexion();
-//   con.Conectar();
-// // users=con.GetUsers();
-//   con.Desconectar();
-//     
-//    users.forEach((obj) -> {vector.add(obj.Name);});
-//    AutoCompleteJComboBox combo = new AutoCompleteJComboBox(new StringSearcheable(vector),cbxUser);
-//    
+ con=new Conexion();
+   con.Conectar();
+   users=con.GetUser();
+   con.Desconectar();
+     
+    users.forEach((obj) -> {vector.add(obj.Name);});
+    
+   AutoCompleteJComboBox combo = new AutoCompleteJComboBox(new StringSearcheable(vector),cbxUser);
+
 //  
     }
     Conexion con;
@@ -219,7 +223,11 @@ a.setVisible(true);
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new login().setVisible(true);
+                try {
+                    new login().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

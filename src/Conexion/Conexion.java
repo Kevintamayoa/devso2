@@ -17,10 +17,15 @@ import javax.swing.JOptionPane;
 public class Conexion {
 
     private Connection con = null;
-    String url = "jdbc:mysql://209.59.155.254:3306/firmatio_devso_propier";
-    String user = "firmatio_Kevin2";
-    String pass = "Kev110797inTam";
+//    String url = "jdbc:mysql://209.59.155.254:3306/firmatio_devso_propier";
+//    String user = "firmatio_Kevin2";
+//    String pass = "Kev110797inTam";
+  //     String url = "jdbc:mysql://189.172.221.160/2806:10b7:2:c1d1:21:32ff:feac:30be/firmatio";
+      String url = "jdbc:mysql://192.168.1.138:5121/firmatio";
+    String user = "root";
+    String pass = "12345";
     public Conexion() {
+        
         con = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -36,7 +41,25 @@ public class Conexion {
         con = null;
     }
 //Get//
-   
+      public List<User> GetUser() throws SQLException {
+        String sql = "SELECT * FROM user ;";
+        List<User> list = new ArrayList<User>();
+  
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while (rs.next()) {
+                int Id = rs.getInt(1);
+                String Description = rs.getString(2);
+                  String a = rs.getString(3);
+              
+                    String v = rs.getString(4);
+              
+                int AccountsType = rs.getInt(5);
+                 list.add(new User(Id, Description, a, v,AccountsType));
+            }
+
+        return list;
+    }
     public List<Account> GetAccounts() throws SQLException {
         String sql = "SELECT A.id,A.description,A.type_id,A.inicial,B.description "
                 + "FROM account A INNER JOIN account_type B ON(B.id=A.type_id) order by A.description asc;";

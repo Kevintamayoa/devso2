@@ -1608,7 +1608,7 @@ cmbProjectMnaguer.setModel(new DefaultComboBoxModel(vectorManagers));
             btnCredito.setBackground(new Color(123,163,186));
             btnSembrado.setBackground(new Color(123,163,186));
              btnInfoGeneral.setBackground(new Color(123,163,186));
-             pnlCargaDesarrollo2 a= new pnlCargaDesarrollo2();
+            
            
             
     }//GEN-LAST:event_btnCatalogoActionPerformed

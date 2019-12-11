@@ -35,14 +35,14 @@ public class RegistroIngresos extends javax.swing.JDialog {
   
    public RegistroIngresos() {
         initComponents();
-         setIconImage (new ImageIcon(getClass().getResource("Images/Screenshot_1.png")).getImage());
-         
-  ImageIcon imagen1 = new ImageIcon(getClass().getResource("Images/Eliminar.png"));
-        Icon fondo1 = new ImageIcon(imagen1.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
-        btnEliminar.setIcon(fondo1);
-          ImageIcon imagen4 = new ImageIcon(getClass().getResource("Images/Buscar.png"));
-        Icon fondo4 = new ImageIcon(imagen4.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
-        txtBuscar.setIcon(fondo4);
+//         setIconImage (new ImageIcon(getClass().getResource("Images/Screenshot_1.png")).getImage());
+//         
+//  ImageIcon imagen1 = new ImageIcon(getClass().getResource("Images/Eliminar.png"));
+//        Icon fondo1 = new ImageIcon(imagen1.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
+//        btnEliminar.setIcon(fondo1);
+//          ImageIcon imagen4 = new ImageIcon(getClass().getResource("Images/Buscar.png"));
+//        Icon fondo4 = new ImageIcon(imagen4.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
+//        txtBuscar.setIcon(fondo4);
     tableIngresos.getTableHeader().setBackground(Color.white);
         tableIngresos.getTableHeader().setForeground(Color.black);
         tableIngresos.getTableHeader().setFont(new Font("InaiMathi", 0, 20)); 
@@ -57,35 +57,35 @@ public class RegistroIngresos extends javax.swing.JDialog {
         tableIngresos.getColumnModel().getColumn(4).setCellRenderer(tcr); 
         tableIngresos.getColumnModel().getColumn(5).setCellRenderer(tcr);
         tableIngresos.getColumnModel().getColumn(7).setCellRenderer(tcr);
-        con=new Conexion();
-             con.Conectar();       
-        model=(DefaultTableModel)tableIngresos.getModel();
-        try{
-     if(Save.ingreso ==1){
-         jLabel6.setText("Registro de pagos de "+Save.Clienttext);
-         this.setTitle("Registro de pagos de "+Save.Clienttext);
-           client=con.GetClientById(Save.Client);
-               DecimalFormat formatea = new DecimalFormat("$###,###.##");    
-           txtSaldo.setText(formatea.format(client.Saldo()));
-
-         incomes=con.GetIncomesBySale(Save.Client);
-
-     }else{
-         lblSaldo.setVisible(false);
-         txtSaldo.setVisible(false);
-         jScrollPane7.setVisible(false);
-         btnAgregarPago.setVisible(false);
-         incomes=con.GetIncomes();
-     }
-      } catch (SQLException ex) {
-                    Logger.getLogger(RegistroIngresos.class.getName()).log(Level.SEVERE, null, ex);
-                }
-     con.Desconectar();
-        for(Income obj: incomes)
-        {
-            //model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Client,obj.Concept,obj.Account,
-            //obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
-        }
+//        con=new Conexion();
+//             con.Conectar();       
+//        model=(DefaultTableModel)tableIngresos.getModel();
+//        try{
+//     if(Save.ingreso ==1){
+//         jLabel6.setText("Registro de pagos de "+Save.Clienttext);
+//         this.setTitle("Registro de pagos de "+Save.Clienttext);
+//           client=con.GetClientById(Save.Client);
+//               DecimalFormat formatea = new DecimalFormat("$###,###.##");    
+//           txtSaldo.setText(formatea.format(client.Saldo()));
+//
+//         incomes=con.GetIncomesBySale(Save.Client);
+//
+//     }else{
+//         lblSaldo.setVisible(false);
+//         txtSaldo.setVisible(false);
+//         jScrollPane7.setVisible(false);
+//         btnAgregarPago.setVisible(false);
+//         incomes=con.GetIncomes();
+//     }
+//      } catch (SQLException ex) {
+//                    Logger.getLogger(RegistroIngresos.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//     con.Desconectar();
+//        for(Income obj: incomes)
+//        {
+//            //model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Client,obj.Concept,obj.Account,
+//            //obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
+//        }
             
               trs=new TableRowSorter(model);
         tableIngresos.setRowSorter(trs);

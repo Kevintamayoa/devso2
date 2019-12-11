@@ -34,13 +34,13 @@ public class RegistroEgresos extends javax.swing.JDialog {
      */
     public RegistroEgresos() {
         initComponents();
-        setIconImage (new ImageIcon(getClass().getResource("Images/Screenshot_1.png")).getImage());
-       ImageIcon imagen1 = new ImageIcon(getClass().getResource("Images/Eliminar.png"));
-        Icon fondo1 = new ImageIcon(imagen1.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
-        btnEliminar.setIcon(fondo1);
-          ImageIcon imagen4 = new ImageIcon(getClass().getResource("Images/Buscar.png"));
-        Icon fondo4 = new ImageIcon(imagen4.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
-        txtBuscar.setIcon(fondo4);
+//        setIconImage (new ImageIcon(getClass().getResource("Images/Screenshot_1.png")).getImage());
+//       ImageIcon imagen1 = new ImageIcon(getClass().getResource("Images/Eliminar.png"));
+//        Icon fondo1 = new ImageIcon(imagen1.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
+//        btnEliminar.setIcon(fondo1);
+//          ImageIcon imagen4 = new ImageIcon(getClass().getResource("Images/Buscar.png"));
+//        Icon fondo4 = new ImageIcon(imagen4.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
+//        txtBuscar.setIcon(fondo4);
         tableEgresos.getTableHeader().setBackground(Color.white);
         tableEgresos.getTableHeader().setForeground(Color.black);
         tableEgresos.getTableHeader().setFont(new Font("InaiMathi", 0, 20)); 
@@ -55,34 +55,34 @@ public class RegistroEgresos extends javax.swing.JDialog {
         tableEgresos.getColumnModel().getColumn(4).setCellRenderer(tcr); 
         tableEgresos.getColumnModel().getColumn(6).setCellRenderer(tcr);
 
-        con=new Conexion();
-        model=(DefaultTableModel)tableEgresos.getModel();
-        con.Conectar();        
-     try{
-     if(Save.ingreso ==1){
-         expenses=con.GetExpensesByProvider(Save.Provider);
-         prov=con.GetProviderById(Save.Provider);
-         jLabel3.setText("Pagos de "+prov.Description);
-         this.setTitle("Pagos de "+prov.Description);
-       DecimalFormat formatea = new DecimalFormat("$###,###.##");    
-           txtSaldo.setText(formatea.format(prov.Saldo()));
-
-     }else{
-         lblSaldo.setVisible(false);
-         txtSaldo.setVisible(false);
-         jScrollPane7.setVisible(false);
-         btnAgregarPago.setVisible(false);
-          expenses=con.GetExpenses();
-     }
-      } catch (SQLException ex) {
-                 }
-     con.Desconectar();
-        for(Expense obj: expenses)
-        {
-            //model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Concept,obj.Account,
-            //obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
-        }
-              trs=new TableRowSorter(model);
+//        con=new Conexion();
+//        model=(DefaultTableModel)tableEgresos.getModel();
+//        con.Conectar();        
+//     try{
+//     if(Save.ingreso ==1){
+//         expenses=con.GetExpensesByProvider(Save.Provider);
+//         prov=con.GetProviderById(Save.Provider);
+//         jLabel3.setText("Pagos de "+prov.Description);
+//         this.setTitle("Pagos de "+prov.Description);
+//       DecimalFormat formatea = new DecimalFormat("$###,###.##");    
+//           txtSaldo.setText(formatea.format(prov.Saldo()));
+//
+//     }else{
+//         lblSaldo.setVisible(false);
+//         txtSaldo.setVisible(false);
+//         jScrollPane7.setVisible(false);
+//         btnAgregarPago.setVisible(false);
+//          expenses=con.GetExpenses();
+//     }
+//      } catch (SQLException ex) {
+//                 }
+//     con.Desconectar();
+//        for(Expense obj: expenses)
+//        {
+//            //model.addRow(new Object[]{obj.Id,obj.Date,obj.Expense_Type,obj.Concept,obj.Account,
+//            //obj.Bill(),obj.BillsNumber,obj.Amount,obj.Iva(),obj.AmountSinIva()});
+//        }
+//              trs=new TableRowSorter(model);
         tableEgresos.setRowSorter(trs);
     }
   private DefaultTableModel model;

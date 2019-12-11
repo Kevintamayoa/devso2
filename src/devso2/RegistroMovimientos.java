@@ -39,14 +39,14 @@ public class RegistroMovimientos extends javax.swing.JFrame {
     public RegistroMovimientos(){
           initComponents();
          
-   setIconImage (new ImageIcon(getClass().getResource("Images/Screenshot_1.png")).getImage());
-         
-            ImageIcon imagen1 = new ImageIcon(getClass().getResource("Images/Eliminar.png"));
-        Icon fondo1 = new ImageIcon(imagen1.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
-        btnEliminar.setIcon(fondo1);
-          ImageIcon imagen4 = new ImageIcon(getClass().getResource("Images/Buscar.png"));
-        Icon fondo4 = new ImageIcon(imagen4.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
-        txtBuscar.setIcon(fondo4);
+//   setIconImage (new ImageIcon(getClass().getResource("Images/Screenshot_1.png")).getImage());
+//         
+//            ImageIcon imagen1 = new ImageIcon(getClass().getResource("Images/Eliminar.png"));
+//        Icon fondo1 = new ImageIcon(imagen1.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
+//        btnEliminar.setIcon(fondo1);
+//          ImageIcon imagen4 = new ImageIcon(getClass().getResource("Images/Buscar.png"));
+//        Icon fondo4 = new ImageIcon(imagen4.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
+//        txtBuscar.setIcon(fondo4);
         tableEgresos.getTableHeader().setBackground(Color.white);
         tableEgresos.getTableHeader().setForeground(Color.black);
         tableEgresos.getTableHeader().setFont(new Font("InaiMathi", 0, 20)); 
@@ -57,21 +57,21 @@ public class RegistroMovimientos extends javax.swing.JFrame {
         tableEgresos.getColumnModel().getColumn(2).setCellRenderer(tcr);
         tableEgresos.getColumnModel().getColumn(3).setCellRenderer(tcr);
         tableEgresos.getColumnModel().getColumn(4).setCellRenderer(tcr); 
-        con=new Conexion();
-             con.Conectar();       
-        model=(DefaultTableModel)tableEgresos.getModel();
-        try{
-         expenses=con.GetMovesCajas();
-
-    
-      } catch (SQLException ex) {
-                    Logger.getLogger(RegistroIngresos.class.getName()).log(Level.SEVERE, null, ex);
-                }
-     con.Desconectar();
-        for(Moves_Account obj: expenses)
-        {
-            model.addRow(new Object[]{obj.Id,obj.Date,obj.AccountOut,obj.AccountIn,obj.Description,obj.Amount});
-        }
+//        con=new Conexion();
+//             con.Conectar();       
+//        model=(DefaultTableModel)tableEgresos.getModel();
+//        try{
+//         expenses=con.GetMovesCajas();
+//
+//    
+//      } catch (SQLException ex) {
+//                    Logger.getLogger(RegistroIngresos.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//     con.Desconectar();
+//        for(Moves_Account obj: expenses)
+//        {
+//            model.addRow(new Object[]{obj.Id,obj.Date,obj.AccountOut,obj.AccountIn,obj.Description,obj.Amount});
+//        }
             
               trs=new TableRowSorter(model);
         tableEgresos.setRowSorter(trs);

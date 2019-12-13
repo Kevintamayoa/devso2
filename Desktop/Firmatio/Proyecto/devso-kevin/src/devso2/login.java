@@ -33,6 +33,7 @@ public class login extends javax.swing.JFrame {
      */
     Project p;
     Double[][] d;
+    Double[][] otros;
     public login()  {
         initComponents();
         Date date= new Date(116,11,3);
@@ -40,12 +41,21 @@ public class login extends javax.swing.JFrame {
         
         p=new Project(0,"Proyecto",date,"concept","jalacho","juan",5,1000000);
         d= new Double[5][3];
+        otros= new Double[5][8];
         int count=0;
-        for(int i=0;i<5;i++){
-            for(int j=0;j<3;j++){
-            d[i][j]=count*10.0;
+        for(int i=0;i<3;i++){
+            for(int j=0;j<5;j++){
+            d[j][i]=count*10.0;
             count++;
             }
+        }
+        count=0;
+        for(int i=0; i<8; i++){
+            for(int j=0;j<5;j++){
+            otros[j][i]=count*2.0;
+            count++;
+            }
+        
         }
         
 // con=new Conexion();
@@ -205,7 +215,7 @@ public class login extends javax.swing.JFrame {
 //            }
 ExportExc e=new ExportExc();
         try {
-            e.exportIncomeFlow(d,p);
+            e.exportIncomeFlow(d,otros,p);
         } catch (IOException ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("Fallo we");

@@ -24,6 +24,7 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -53,7 +54,7 @@ public void exportIncomeFlow(Double[][] flujo,Double[][] flujoOtros,Project p) t
                 Workbook libro = new HSSFWorkbook();
                 FileOutputStream archivo = new FileOutputStream(archivoXLS);
                 Sheet hoja = libro.createSheet("Hoja 1");
-                hoja.setDisplayGridlines(true);
+                hoja.setDisplayGridlines(false);
                 for (int f = 0; f < flujo[0].length+2; f++) {//filas
                     Row fila = hoja.createRow(f);
                     for (int c = 0; c < flujo.length+3; c++) {//columnas
@@ -86,6 +87,7 @@ public void exportIncomeFlow(Double[][] flujo,Double[][] flujoOtros,Project p) t
                 int filaInicio = 2;
                 for (int f = 0; f < flujo[0].length+11; f++) {//filas
                     Row fila = hoja.createRow(filaInicio);
+                    
                     filaInicio++;
                     for (int c = 0; c < flujo.length+3; c++) {//columnas
                         if(c==1){
@@ -307,7 +309,9 @@ public void exportIncomeFlow(Double[][] flujo,Double[][] flujoOtros,Project p) t
                         }
                     }
                 }
-                
+                colorFila((HSSFWorkbook)libro,2,HSSFColor.GREY_40_PERCENT.index);
+                colorFila((HSSFWorkbook)libro,3,HSSFColor.GREY_25_PERCENT.index);
+                colorFila((HSSFWorkbook)libro,7,HSSFColor.GREY_25_PERCENT.index);
                 hoja.setColumnWidth(1, 8000);
                 libro.write(archivo);
                 archivo.close();
@@ -435,27 +439,44 @@ public void exportarExcel(JTable t,JTable t2) throws IOException {
             }
         }
     }
-public void colorCeldas(HSSFWorkbook hssfWorkbook, int fila) {
+
+
+public void colorFila(HSSFWorkbook hssfWorkbook, int fila, short color) {
  HSSFSheet mySheet = hssfWorkbook.getSheetAt(0);
  
  // Creamos el estilo de celda del color ROJO
- HSSFCellStyle styleGroup3 = hssfWorkbook.createCellStyle();
- styleGroup3.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
- styleGroup3.setFillForegroundColor(HSSFColor.RED.index);
+ HSSFCellStyle styleGroup = hssfWorkbook.createCellStyle();
+ styleGroup.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+ styleGroup.setFillForegroundColor(color);
  
- // Creamos el estilo de celda del color AMARILLO
- HSSFCellStyle styleGroup2 = hssfWorkbook.createCellStyle();
- styleGroup2.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
- styleGroup2.setFillForegroundColor(HSSFColor.YELLOW.index);
- 
- // Creamos el estilo de celda del color VERDE
- HSSFCellStyle styleGroup1 = hssfWorkbook.createCellStyle();
- styleGroup1.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
- styleGroup1.setFillForegroundColor(HSSFColor.GREEN.index);
- 
+
   
+ 
+
  // Recorrer cada columna del excel
  // Comenzamos en 1 porque la 0 es el header del excel
  
+  HSSFRow myRow = mySheet.getRow(fila);
+ 
+  // Recorremos sobre cada celda de la columna seleccionada
+  Iterator cellIter = myRow.cellIterator();
+  while (cellIter.hasNext()) {
+ 
+   HSSFCell myCell = (HSSFCell) cellIter.next();
+    
+     myCell.setCellStyle(styleGroup);
+    
+    
+    
+    
+    
+  
+ }
+  
+    
+  
+  
+   }
 }
-}
+
+
